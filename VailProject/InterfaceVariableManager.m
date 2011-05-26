@@ -87,6 +87,8 @@ static id sharedManager = nil;
     }else if([uri rangeOfString:@"/simulator"].length > 0 )
     {
         self.distance = [(NSString*)[params objectForKey:@"distance"] doubleValue];
+        self.lane = [(NSString*)[params objectForKey:@"lane"] intValue];
+        self.speed = [(NSString*)[params objectForKey:@"lane"] doubleValue]; 
     }
 }
 

@@ -11,6 +11,7 @@
 #import "SelectPathViewController.h"
 #import <AVFoundation/AVAudioPlayer.h>
 #import "AlertCollisionViewController.h"
+#import "DestinationSuggestionViewController.h"
 
 #define MIN_INDICATING_DISTANCE_TURN 250
 #define MIN_INDICATING_DISTANCE_STRAIGHT 1000
@@ -74,6 +75,8 @@
     }
     
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:0]];
+        [prospectedEvent setObject:@"D" forKey:[NSNumber numberWithDouble:500]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:1000]];
         [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:1800]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:3000]];
         [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:3800]];
@@ -141,12 +144,24 @@
 
     }else if([lastEvent isEqualToString:@"I"]){
         [_refreshTimer invalidate];
+        lastIndicatedDirection = @"I";
         //[refreshTimer release];
         SelectPathViewController *nController =[[SelectPathViewController alloc] initWithNibName:@"SelectPathViewController" bundle:nil];
         [self.navigationController pushViewController:nController animated:YES];
         [nController release];
+        
+    }else if([lastEvent isEqualToString:@"D"]){
+        [_refreshTimer invalidate];
+        lastIndicatedDirection = @"D";
+        //[refreshTimer release];
+        DestinationSuggestionViewController *nController =[[DestinationSuggestionViewController alloc] initWithNibName:@"DestinationSuggestionViewController" bundle:nil];
+        [self.navigationController pushViewController:nController animated:YES];
+        [nController release];
+        
     }else if([lastEvent isEqualToString:@"CR"]){
         [_refreshTimer invalidate];
+        lastIndicatedDirection = @"CR";
+
         //[refreshTimer release];
         AlertCollisionViewController *nController =[[AlertCollisionViewController alloc] initWithNibName:@"AlertCollisionViewController" bundle:nil];
         nController.isRight = YES;
@@ -155,6 +170,7 @@
         [nController release];
     }else if([lastEvent isEqualToString:@"CL"]){
         [_refreshTimer invalidate];
+        lastIndicatedDirection = @"CL";
         //[refreshTimer release];
         AlertCollisionViewController *nController =[[AlertCollisionViewController alloc] initWithNibName:@"AlertCollisionViewController" bundle:nil];
         nController.isRight = NO;

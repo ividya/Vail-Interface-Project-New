@@ -95,9 +95,9 @@
         _lLabel.text = @"Stay in this lane!";
     }else{
         if(_isRight){
-            _rLabel.text = @"Move to the right lane";
+            _rLabel.text = @"Move to the Right-most lane and stay there!";
         }else{
-            _lLabel.text = @"Move to the left lane";
+            _lLabel.text = @"Move to the Left-most lane and stay there!";
         }
     }
     

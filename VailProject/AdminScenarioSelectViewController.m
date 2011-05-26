@@ -91,7 +91,7 @@
 }
 
 - (IBAction)navigationAction:(id)sender {
-    [VailUtility sendHTTP:[self urlCommandScenario:@"tutorialButtonPushed"]];
+    [VailUtility sendHTTP:[self urlCommandScenario:@"goNavigation"]];
     
     AdminNavigationViewController *nController =[[AdminNavigationViewController alloc] initWithNibName:@"AdminNavigationViewController" bundle:nil]; 
     [self.navigationController pushViewController:nController animated:YES];
