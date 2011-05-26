@@ -145,6 +145,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.hidesBackButton = YES;
+    
     blackView = [[UIView alloc] initWithFrame:[self.view frame]];
     [blackView setBackgroundColor:[UIColor blackColor]];
     
@@ -192,7 +194,7 @@
         [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:16];
     }
     else
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:20];
+        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:45];
 }
 
 - (void)viewDidUnload
@@ -262,7 +264,7 @@
         
         [[EmailManager instance] addMoreEmails];
         
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:20];
+        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:45];
         return;
 
     }
