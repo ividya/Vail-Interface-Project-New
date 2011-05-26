@@ -118,7 +118,7 @@
     [self repeatEmail:nil];
     
     if (![EmailManager instance].tutorialMode)
-        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"calendar" result:@"start" time:[NSDate date]];
+        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"calendar" result:@"show" time:[NSDate date]];
 
 }
 

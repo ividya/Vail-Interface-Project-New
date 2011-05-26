@@ -142,7 +142,7 @@
     
 
     if (![EmailManager instance].tutorialMode)
-        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emailContent" result:@"start" time:[NSDate date]];
+        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emailContent" result:@"show" time:[NSDate date]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -94,7 +94,6 @@ static id sharedManager = nil;
 
 - (void)saveEvent:(SubTestMode)subTestMode event:(NSString*)event result:(NSString*) result time:(NSDate*)time{
         
-    return;
     NSManagedObjectContext *context = [(id)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     VailEvent *newEvent = [NSEntityDescription insertNewObjectForEntityForName:@"VailEvent" inManagedObjectContext:context];
