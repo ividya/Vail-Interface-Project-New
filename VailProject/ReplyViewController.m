@@ -268,7 +268,7 @@
     [self repeatEmail:nil];
     
     if (![EmailManager instance].tutorialMode)
-        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emailReplying" result:@"start" time:[NSDate date]];
+        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emailReplying" result:@"show" time:[NSDate date]];
 }
 
 - (void)viewDidUnload

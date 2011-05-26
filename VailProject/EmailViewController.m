@@ -84,11 +84,11 @@
     if (![EmailManager instance].tutorialMode)
     {
         if([varMan displayMode] == SCREEN_DISPLAY) {
-            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"start" time:[[NSDate date] dateByAddingTimeInterval:5]];
+            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"AddedNewEmail" time:[[NSDate date] dateByAddingTimeInterval:5]];
         }
         else
         {
-            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"start" time:[NSDate date]];            
+            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"AddedNewEmail" time:[NSDate date]];            
         }
     }
 
@@ -325,10 +325,10 @@
                 [NSThread sleepForTimeInterval:[self.player duration]+0.5];
             }
 
+            if (![EmailManager instance].tutorialMode)
+                [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"show" time:[NSDate date]];
         }
         
-        if (![EmailManager instance].tutorialMode)
-            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"start" time:[NSDate date]];
     }
     return;
 
@@ -565,6 +565,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+ 
+    if (![EmailManager instance].tutorialMode)
+        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"selectedEmail" time:[NSDate date]];
     
     EmailBodyViewController *bodyViewController = [[EmailBodyViewController alloc] initWithNibName:@"EmailBodyViewController" bundle:nil];
 

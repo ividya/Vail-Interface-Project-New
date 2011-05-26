@@ -61,7 +61,6 @@
 		2F4C522F136E924B00561E0E /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C522D136E924B00561E0E /* IntroViewController.m */; };
 		2F4C5230136E924B00561E0E /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4C522E136E924B00561E0E /* IntroViewController.xib */; };
 		2F53597D1371478E0006D89A /* InterfaceVariableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53597C1371478D0006D89A /* InterfaceVariableManager.m */; };
-		2F53598F137164320006D89A /* VailEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53598E137164310006D89A /* VailEvent.m */; };
 		2F535993137169130006D89A /* AdminModeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F535991137169120006D89A /* AdminModeSelectViewController.m */; };
 		2F658B401372D3DC000EE5C1 /* EmailBodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F658B331372D3DC000EE5C1 /* EmailBodyViewController.m */; };
 		2F658B411372D3DC000EE5C1 /* EmailBodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F658B341372D3DC000EE5C1 /* EmailBodyViewController.xib */; };
@@ -129,6 +128,7 @@
 		9E0AF86413893185001FF87B /* introhelpmenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AF86313893185001FF87B /* introhelpmenu.mp3 */; };
 		9E0D5F851386571700E2B7DA /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D5F841386571700E2B7DA /* whiteButton.png */; };
 		9E0D5F8913865AF800E2B7DA /* EmailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D5F8813865AF800E2B7DA /* EmailManager.m */; };
+		9E0E9214138E7003008435CE /* VailEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9213138E7003008435CE /* VailEvent.m */; };
 		9E213BDC138A6CE400A1FE63 /* eventadded.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E213BD9138A6CE400A1FE63 /* eventadded.mp3 */; };
 		9E213BDD138A6CE400A1FE63 /* e2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E213BDA138A6CE400A1FE63 /* e2.mp3 */; };
 		9E213BDE138A6CE400A1FE63 /* addtocalendarsayyesorcancel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E213BDB138A6CE400A1FE63 /* addtocalendarsayyesorcancel.mp3 */; };
@@ -271,8 +271,6 @@
 		2F4C522E136E924B00561E0E /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
 		2F53597B1371478C0006D89A /* InterfaceVariableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceVariableManager.h; sourceTree = "<group>"; };
 		2F53597C1371478D0006D89A /* InterfaceVariableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceVariableManager.m; sourceTree = "<group>"; };
-		2F53598D137164310006D89A /* VailEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VailEvent.h; sourceTree = "<group>"; };
-		2F53598E137164310006D89A /* VailEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VailEvent.m; sourceTree = "<group>"; };
 		2F535990137169110006D89A /* AdminModeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminModeSelectViewController.h; sourceTree = "<group>"; };
 		2F535991137169120006D89A /* AdminModeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminModeSelectViewController.m; sourceTree = "<group>"; };
 		2F658B321372D3DC000EE5C1 /* EmailBodyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailBodyViewController.h; sourceTree = "<group>"; };
@@ -360,6 +358,8 @@
 		9E0D5F841386571700E2B7DA /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
 		9E0D5F8713865AF800E2B7DA /* EmailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailManager.h; sourceTree = "<group>"; };
 		9E0D5F8813865AF800E2B7DA /* EmailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailManager.m; sourceTree = "<group>"; };
+		9E0E9212138E7003008435CE /* VailEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VailEvent.h; sourceTree = "<group>"; };
+		9E0E9213138E7003008435CE /* VailEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VailEvent.m; sourceTree = "<group>"; };
 		9E213BD9138A6CE400A1FE63 /* eventadded.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eventadded.mp3; sourceTree = "<group>"; };
 		9E213BDA138A6CE400A1FE63 /* e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = e2.mp3; sourceTree = "<group>"; };
 		9E213BDB138A6CE400A1FE63 /* addtocalendarsayyesorcancel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = addtocalendarsayyesorcancel.mp3; sourceTree = "<group>"; };
@@ -711,8 +711,8 @@
 				9E3BA183136BFB410011F33F /* MainWindow.xib */,
 				9E3BA178136BFB410011F33F /* Supporting Files */,
 				2F4C5227136E877300561E0E /* VailProject.xcdatamodeld */,
-				2F53598D137164310006D89A /* VailEvent.h */,
-				2F53598E137164310006D89A /* VailEvent.m */,
+				9E0E9212138E7003008435CE /* VailEvent.h */,
+				9E0E9213138E7003008435CE /* VailEvent.m */,
 			);
 			path = VailProject;
 			sourceTree = "<group>";
@@ -1024,7 +1024,6 @@
 				2F2F79C9136EA67600FBF949 /* WebSocket.m in Sources */,
 				2F2F79CC136EA69800FBF949 /* GCDAsyncSocket.m in Sources */,
 				2F53597D1371478E0006D89A /* InterfaceVariableManager.m in Sources */,
-				2F53598F137164320006D89A /* VailEvent.m in Sources */,
 				2F535993137169130006D89A /* AdminModeSelectViewController.m in Sources */,
 				2F28B3A31372A59E00A33254 /* VailUtility.m in Sources */,
 				2F658B401372D3DC000EE5C1 /* EmailBodyViewController.m in Sources */,
@@ -1053,6 +1052,7 @@
 				2F2AE077138DD42000DF6828 /* SelectPathViewController.m in Sources */,
 				2F2AE079138DD42000DF6828 /* PathNavigationViewController.m in Sources */,
 				2F2AE07B138DD42000DF6828 /* AdminNavigationViewController.m in Sources */,
+				9E0E9214138E7003008435CE /* VailEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

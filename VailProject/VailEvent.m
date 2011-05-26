@@ -2,7 +2,7 @@
 //  VailEvent.m
 //  VailProject
 //
-//  Created by Jeongjin on 5/4/11.
+//  Created by Michael Chun on 5/26/11.
 //  Copyright (c) 2011 Stanford. All rights reserved.
 //
 
@@ -11,13 +11,13 @@
 
 @implementation VailEvent
 @dynamic testId;
+@dynamic feedbackMode;
 @dynamic time;
 @dynamic distance;
+@dynamic subtestMode;
 @dynamic eventName;
 @dynamic eventResult;
-@dynamic subtestMode;
 @dynamic displayMode;
-@dynamic feedbackMode;
 @dynamic timeString;
 
 @end
