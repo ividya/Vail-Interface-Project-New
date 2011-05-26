@@ -227,13 +227,30 @@
     [self.navigationController popToViewController:vc animated:YES];
 }
 
-- (void)addNewEmails:(id) param
+- (void)commandList:(id) param
 {
-    
-}
-- (void)addMoreEmails:(id) param
-{
-    
+    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY &&
+       [[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK) {
+        
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"availablevoicecommands" ofType:@"mp3"];
+        
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration] +1];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"listenagain" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration] +0.5];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"addtocalendar" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration] +0.5];
+    }    
 }
 
 - (void)yes:(id) param

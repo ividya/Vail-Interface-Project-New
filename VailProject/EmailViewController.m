@@ -53,7 +53,8 @@
     
     // Do notification
     if([varMan displayMode] == SCREEN_DISPLAY) {
-        [ViewEffects blink:[UIApplication sharedApplication].keyWindow];        
+        [ViewEffects blink:[UIApplication sharedApplication].keyWindow];
+        [ViewEffects popupAlertViewWithMsg:@"New Email!!!" targetViewController:self forDuration:5];
     }
     else if([varMan displayMode] == VOICE_DISPLAY) {
         // Play new email sound
@@ -79,8 +80,17 @@
     
     [self repeatEmail:nil];
     
+
     if (![EmailManager instance].tutorialMode)
-        [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"start" time:[NSDate date]];
+    {
+        if([varMan displayMode] == SCREEN_DISPLAY) {
+            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"start" time:[[NSDate date] dateByAddingTimeInterval:5]];
+        }
+        else
+        {
+            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"start" time:[NSDate date]];            
+        }
+    }
 
 }
 
@@ -163,7 +173,7 @@
     if (![EmailManager instance].tutorialMode)
     {
         [ViewEffects showView:self.startView targetView:self.tableView];
-        [ViewEffects hideView:self.startView delay:5];
+        [ViewEffects hideView:self.startView delay:7];
     }
         
     // Hide both buttons until email is received
@@ -202,11 +212,13 @@
     {
         if ([[EmailManager instance].emailModelArray count] == 1){
             firstEmailButton.hidden = YES;
-            secondEmailButton.hidden = NO;        
+            secondEmailButton.hidden = NO; 
+            repeatButton.hidden = NO;
         }
         else if ([[EmailManager instance].emailModelArray count] == 2){
             firstEmailButton.hidden = NO;
             secondEmailButton.hidden = NO;        
+            repeatButton.hidden = NO;
         }
     }
     
@@ -215,6 +227,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    // Register current view as the EMAIL_ADMIN listener
+    [[InterfaceVariableManager sharedManager] registerController:EMAIL_ADMIN controller:self];
     
     if([self checkTaskCompletion] && !stage1complete){
         
@@ -254,10 +269,7 @@
         [self performSelector:@selector(returnToMainMenu:) withObject:nil afterDelay:30];
         return;
     }
-    
-    // Register current view as the EMAIL_ADMIN listener
-    [[InterfaceVariableManager sharedManager] registerController:EMAIL_ADMIN controller:self];
-    
+        
     // For display feedback
     if (receivedEmail)
     {   
@@ -309,6 +321,7 @@
         if (![EmailManager instance].tutorialMode)
             [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"start" time:[NSDate date]];
     }
+    return;
 
 }
 
@@ -335,7 +348,7 @@
         
         if ([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY)
         {
-            switch (i)
+            switch (email.emailIndex)
             {
                 case 0:
                     soundPath = [[NSBundle mainBundle] pathForResource:@"firstemail" ofType:@"mp3"];
@@ -363,9 +376,7 @@
     }
     
     // Show both buttons
-    self.firstEmailButton.hidden = NO;
-    self.secondEmailButton.hidden = NO;
-    self.repeatButton.hidden = NO;
+    [self viewWillAppear:NO];
 }
 
 - (void)firstEmail:(id) param

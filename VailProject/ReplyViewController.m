@@ -128,7 +128,7 @@
         [self.player play];
         
         [NSThread sleepForTimeInterval:[self.player duration]];
-        soundPath = [[NSBundle mainBundle] pathForResource:@"replymessagesent" ofType:@"mp3"];
+        soundPath = [[NSBundle mainBundle] pathForResource:@"returningtoemaillist" ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player stop];
         [self.player play];
@@ -155,7 +155,7 @@
 
     
     if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY) {
-        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"noresponsesent" ofType:@"mp3"];
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"replymessagesent" ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player stop];
         [self.player play];
@@ -177,6 +177,39 @@
     UIViewController *vc = [[self.navigationController viewControllers] objectAtIndex:vcIndex-2];
     [self.navigationController popToViewController:vc animated:YES];
 
+}
+
+- (void)commandList:(id) param
+{
+    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY &&
+       [[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK) {
+        
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"availablevoicecommands" ofType:@"mp3"];
+        
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration] +1];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"listenagain" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration] +0.5];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"message1" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration] +0.5];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"message2" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration] +0.5];
+
+    }    
 }
 
 #pragma mark - View lifecycle

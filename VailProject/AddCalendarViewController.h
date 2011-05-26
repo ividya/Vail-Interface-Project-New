@@ -47,9 +47,7 @@
 - (void)replyEmail:(id) param;
 - (void)deleteEmail:(id) param;
 - (void)addCalendar:(id) param;
-
-- (void)addNewEmails:(id) param;
-- (void)addMoreEmails:(id) param;
+- (void)commandList:(id) param;
 
 - (void)yes:(id) param;
 - (void)no:(id) param;

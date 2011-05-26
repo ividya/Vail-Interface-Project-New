@@ -101,7 +101,7 @@
 
 - (IBAction)helpMenu:(id)sender
 {
-    [VailUtility sendHTTP:[self urlCommandString:@"helpMenu"]];    
+    [VailUtility sendHTTP:[self urlCommandString:@"commandList"]];    
 }
 
 - (IBAction)yes:(id)sender

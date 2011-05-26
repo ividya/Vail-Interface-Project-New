@@ -40,7 +40,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        readBody = YES;
+
     }
     return self;
 }
@@ -69,6 +69,7 @@
 {
     [super viewDidLoad];
     
+    
     InterfaceVariableManager *varMan = [InterfaceVariableManager sharedManager];
     
     if([varMan displayMode] == VOICE_DISPLAY) {
@@ -81,6 +82,7 @@
     
     if([varMan displayMode] == VOICE_DISPLAY && [varMan feedbackMode] == VOICE_FEEDBACK) {
         [self.tableView setBackgroundColor:[UIColor blackColor]];
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     }
         
     self.navigationItem.hidesBackButton = YES;
@@ -126,7 +128,8 @@
     
     if([[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK) 
     {
-        [self commandList:nil];
+        if ([EmailManager instance].tutorialMode)
+            [self commandList:nil];
     }
 
     if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY && [[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK) {
@@ -416,7 +419,7 @@
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration] +0.5];
         
-        soundPath = [[NSBundle mainBundle] pathForResource:@"close" ofType:@"mp3"];
+        soundPath = [[NSBundle mainBundle] pathForResource:@"orclose" ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player stop];
         [self.player play];
@@ -440,31 +443,37 @@
     [self.player stop];
     
     
-    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY && readBody) {
+    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY) {
         
         NSString *soundPath;
         NSString *emailNumber;
         
         if (email.emailIndex == 0)
-            emailNumber = @"firstEmail";
+            emailNumber = @"firstemail";
         if (email.emailIndex == 1)        
-            emailNumber = @"secondEmail";
+            emailNumber = @"secondemail";
         
         soundPath = [[NSBundle mainBundle] pathForResource:emailNumber ofType:@"mp3"];
-        
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player stop];
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration] +0.5];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:email.headingSoundFile ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player play];                        
+        [NSThread sleepForTimeInterval:[self.player duration] + 0.5];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"emailcontent" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player play];                        
+        [NSThread sleepForTimeInterval:[self.player duration] + 0.5];
         
         soundPath = [[NSBundle mainBundle] pathForResource:email.contentSoundFile ofType:@"mp3"];
-        
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player stop];
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration] +0.5];
-        
-        readBody = NO;
     }
     
 }
@@ -585,6 +594,11 @@
         NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"emaildeleted" ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration]+0.5];
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"returningtoemaillist" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration]+0.5];
     }    

@@ -86,6 +86,7 @@
 		2FA6B5F01382451C00EC3145 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA6B5EF1382451C00EC3145 /* SystemConfiguration.framework */; };
 		2FA6B5F31382453300EC3145 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA6B5F21382453300EC3145 /* MobileCoreServices.framework */; };
 		2FA6B5F61382454600EC3145 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA6B5F51382454600EC3145 /* libz.1.2.3.dylib */; };
+		9E05BF1B138E4A88001EE84A /* emailcontent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E05BF1A138E4A88001EE84A /* emailcontent.mp3 */; };
 		9E086D77138BC175006D73A9 /* confirmingaddtocalendar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E086D76138BC175006D73A9 /* confirmingaddtocalendar.mp3 */; };
 		9E086D7C138C38BB006D73A9 /* message2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E086D79138C38BB006D73A9 /* message2.mp3 */; };
 		9E086D7D138C38BB006D73A9 /* message1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E086D7A138C38BB006D73A9 /* message1.mp3 */; };
@@ -182,6 +183,7 @@
 		9EA62C581389EC67001D1D17 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA62C561389EC67001D1D17 /* CustomAlertViewController.m */; };
 		9EA62C591389EC67001D1D17 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA62C571389EC67001D1D17 /* CustomAlertViewController.xib */; };
 		9ED4D5CC138A8FC600E58D25 /* AdminModeSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED4D5CB138A8FC600E58D25 /* AdminModeSelectViewController.xib */; };
+		9EEFADF4138DEDEF0071EB15 /* b0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFADF3138DEDEF0071EB15 /* b0.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -314,6 +316,7 @@
 		2FA6B5F21382453300EC3145 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2FA6B5F41382453C00EC3145 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2FA6B5F51382454600EC3145 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		9E05BF1A138E4A88001EE84A /* emailcontent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = emailcontent.mp3; sourceTree = "<group>"; };
 		9E086D76138BC175006D73A9 /* confirmingaddtocalendar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = confirmingaddtocalendar.mp3; sourceTree = "<group>"; };
 		9E086D79138C38BB006D73A9 /* message2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = message2.mp3; sourceTree = "<group>"; };
 		9E086D7A138C38BB006D73A9 /* message1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = message1.mp3; sourceTree = "<group>"; };
@@ -364,7 +367,6 @@
 		9E213BE1138A806300A1FE63 /* undeletableemail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = undeletableemail.mp3; sourceTree = "<group>"; };
 		9E213BE2138A806300A1FE63 /* eventexists.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eventexists.mp3; sourceTree = "<group>"; };
 		9E26E3F1137404F200B3CBEB /* b1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b1.mp3; sourceTree = "<group>"; };
-		9E26E3F2137404F200B3CBEB /* b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b0.mp3; sourceTree = "<group>"; };
 		9E26E3F3137404F200B3CBEB /* h0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = h0.mp3; sourceTree = "<group>"; };
 		9E26E3F4137404F200B3CBEB /* h1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = h1.mp3; sourceTree = "<group>"; };
 		9E26E3F5137404F200B3CBEB /* h2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = h2.mp3; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 		9EA62C561389EC67001D1D17 /* CustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewController.m; sourceTree = "<group>"; };
 		9EA62C571389EC67001D1D17 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
 		9ED4D5CB138A8FC600E58D25 /* AdminModeSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminModeSelectViewController.xib; sourceTree = "<group>"; };
+		9EEFADF3138DEDEF0071EB15 /* b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b0.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -510,6 +513,7 @@
 		2F53597A137136200006D89A /* voices */ = {
 			isa = PBXGroup;
 			children = (
+				9E05BF1A138E4A88001EE84A /* emailcontent.mp3 */,
 				2F2AE064138DD37E00DF6828 /* dq.mp3 */,
 				2F2AE065138DD37E00DF6828 /* cpselected.mp3 */,
 				2F2AE066138DD37E00DF6828 /* cfselected.mp3 */,
@@ -575,7 +579,7 @@
 				2F8A98151383FAC000BDF544 /* bselected.mp3 */,
 				9E6AFF2A137420BA00EF43B9 /* newemail.mp3 */,
 				9E26E3F1137404F200B3CBEB /* b1.mp3 */,
-				9E26E3F2137404F200B3CBEB /* b0.mp3 */,
+				9EEFADF3138DEDEF0071EB15 /* b0.mp3 */,
 				9E953E54138A5BC80010B378 /* b2.mp3 */,
 				9E26E3F3137404F200B3CBEB /* h0.mp3 */,
 				9E26E3F4137404F200B3CBEB /* h1.mp3 */,
@@ -983,6 +987,8 @@
 				2F2AE078138DD42000DF6828 /* SelectPathViewController.xib in Resources */,
 				2F2AE07A138DD42000DF6828 /* PathNavigationViewController.xib in Resources */,
 				2F2AE07C138DD42000DF6828 /* AdminNavigationViewController.xib in Resources */,
+				9EEFADF4138DEDEF0071EB15 /* b0.mp3 in Resources */,
+				9E05BF1B138E4A88001EE84A /* emailcontent.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

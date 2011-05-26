@@ -52,6 +52,7 @@ static EmailManager *sharedSingleton = nil;
     emailModel.eventSoundFile = @"e3";
     emailModel.newmail = YES;
     emailModel.undeletable = YES;
+    emailModel.emailIndex = 1;
     [emailModelArray insertObject:emailModel atIndex:0];
     
     emailModel = [[[EmailModel alloc] init] autorelease];
@@ -62,6 +63,7 @@ static EmailManager *sharedSingleton = nil;
     emailModel.headingSoundFile = @"h4";
     emailModel.contentSoundFile = @"b4";
     emailModel.newmail = YES;
+    emailModel.emailIndex = 0;
     [emailModelArray insertObject:emailModel atIndex:0];
 }
 
