@@ -180,8 +180,17 @@
     self.firstEmailButton.hidden = YES;
     self.secondEmailButton.hidden = YES;
     
-    if ([EmailManager instance].tutorialMode)
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:1];
+    if ([EmailManager instance].tutorialMode){
+        NSMutableString *helpMsg = [NSMutableString stringWithString:@"Your goal is to delete spam mails and respond to other emails.\n\n Email containing event information must be added to calendar as well.\n\n"];
+        
+
+        if([varMan feedbackMode] == VOICE_FEEDBACK) {
+            [helpMsg appendString:@"At any time say \"Repeat\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
+        }
+        [ViewEffects popupAlertViewWithMsg:helpMsg targetViewController:self forDuration:12];
+        
+        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:16];
+    }
     else
         [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:20];
 }
