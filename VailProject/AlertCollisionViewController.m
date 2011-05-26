@@ -21,7 +21,7 @@
 @synthesize rLabel = _rLabel;
 @synthesize lLabel = _lLabel;
 
-#define STAYING_DISTANCE 500
+#define STAYING_DISTANCE 1000
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,6 +64,8 @@
             _rightScreenView.hidden = YES;
             _leftScreenView.hidden = NO;            
         }
+        
+        [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event: [NSString stringWithFormat:@"COLLISION_ASKED_%f",startDistance] result:@"SUCCESS" time:[NSDate date]];
     }else{
         _voiceView.hidden = NO;
         _rightScreenView.hidden = YES;
@@ -93,6 +95,13 @@
     if( (_isRight && lane == 3) || (!_isRight && lane == 1)){
         _rLabel.text = @"Stay in this lane!";
         _lLabel.text = @"Stay in this lane!";
+        
+        if(!isRecorded){
+            [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event: [NSString stringWithFormat:@"COLLISION_MOVED_%f",startDistance] result:[NSString stringWithFormat:@"%d,%d",_currentLane,lane] time:[NSDate date]];
+            isRecorded = YES;
+        }
+
+        
     }else{
         if(_isRight){
             _rLabel.text = @"Move to the Right-most lane and stay there!";
@@ -128,6 +137,10 @@
 {
     if (player == exitPlayer){
         [self exitCollisionView];
+    }
+    
+    if (player == alertPlayer){
+        [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event: [NSString stringWithFormat:@"COLLISION_ASKED_%f",startDistance] result:@"SUCCESS" time:[NSDate date]];
     }
 }
 

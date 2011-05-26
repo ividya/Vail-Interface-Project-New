@@ -61,6 +61,9 @@
     if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
         _screenDisplayView.hidden = NO;
         _voiceDisplayView.hidden = YES;
+        
+    [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event:@"DESTINATION_ASK" result:@"SUCCESS" time:[NSDate date]];
+        
     }else{
         _screenDisplayView.hidden = YES;
         _voiceDisplayView.hidden = NO;
@@ -79,6 +82,9 @@
         _screenFeedbackView.hidden = YES;
         _voiceFeedbackView.hidden = NO;
     } 
+    
+
+
 }
 
 - (void)receiveVoiceFeedback:(id) params
@@ -163,6 +169,10 @@
     if (player == _pathPlayer){
         [self.navigationController pushViewController:nController animated:YES];
         [nController release];
+    }
+    
+    if (player == _player){
+        [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event:@"DESTINATION_ASK" result:@"SUCCESS" time:[NSDate date]];
     }
 }
 

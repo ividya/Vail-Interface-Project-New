@@ -14,6 +14,7 @@
         AVAudioPlayer *alertPlayer;
         AVAudioPlayer *exitPlayer;
         long startDistance;
+        BOOL isRecorded;
 }
 
 @property (nonatomic,retain) IBOutlet UIView* rightScreenView;

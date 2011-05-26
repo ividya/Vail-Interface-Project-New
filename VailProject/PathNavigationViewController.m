@@ -26,6 +26,7 @@
 @synthesize distanceLabel=_distanceLabel;
 @synthesize pathLabel=_pathLabel;
 @synthesize refreshTimer=_refreshTimer;
+@synthesize directionLabel=_directionLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -77,16 +78,26 @@
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:0]];
         [prospectedEvent setObject:@"D" forKey:[NSNumber numberWithDouble:500]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:1000]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:1800]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:3000]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:3800]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:5000]];
-        [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:5500]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:6000]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:8800]];
+        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:2300]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:3500]];
+        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:4100]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:5300]];
+        [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:6000]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:7000]];
+        [prospectedEvent setObject:@"CL" forKey:[NSNumber numberWithDouble:8200]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:9000]];
+        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:9500]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:10000]];
-        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:11000]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:11500]];
+        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:10800]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:11200]];
+        [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:12300]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:13300]];
+        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:13800]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:14500]];
+        [prospectedEvent setObject:@"CL" forKey:[NSNumber numberWithDouble:15200]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:16200]];
+        [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:17200]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:18000]];
       
     
     double currentDistance = [[InterfaceVariableManager sharedManager] distance];
@@ -95,7 +106,7 @@
         double eventPoint = [eKey doubleValue];
         if(eventPoint < currentDistance){
             [prospectedEvent removeObjectForKey:eKey];
-        }else{
+        }else{ 
             break;
         }
     }
@@ -182,7 +193,7 @@
         [self quitNavigation];
     }else if(lastEvent == nil){
         
-        if([lastIndicatedDirection isEqualToString:@"S"] || [lastIndicatedDirection isEqualToString:@"I"]){
+        if([lastIndicatedDirection isEqualToString:@"S"] || [lastIndicatedDirection isEqualToString:@"I"] || [lastIndicatedDirection isEqualToString:@"CR"] || [lastIndicatedDirection isEqualToString:@"CL"] || [lastIndicatedDirection isEqualToString:@"D"]){
             if( currentDistance - lastIndicatedDistance > MIN_INDICATING_DISTANCE_STRAIGHT ){
                 lastIndicatedDistance = currentDistance;
                 [self indicateStraight]; 
@@ -227,6 +238,7 @@
         _leftView.hidden = YES;
         _rightView.hidden = YES;
         _micView.hidden = YES;
+        _directionLabel.text = @"Go Straight!";
     }else{
         _straightView.hidden = YES;
         _leftView.hidden = YES;
@@ -247,6 +259,7 @@
         _leftView.hidden = YES;
         _rightView.hidden = NO;
         _micView.hidden = YES;
+        _directionLabel.text = @"Turn Right at the next intersection";
     }else{
         _straightView.hidden = YES;
         _leftView.hidden = YES;
@@ -266,6 +279,7 @@
         _leftView.hidden = NO;
         _rightView.hidden = YES;
         _micView.hidden = YES;
+        _directionLabel.text = @"Turn Left at the next intersection";
     }else{
         _straightView.hidden = YES;
         _leftView.hidden = YES;

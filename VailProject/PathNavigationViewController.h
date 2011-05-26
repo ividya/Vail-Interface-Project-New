@@ -24,6 +24,7 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, retain) IBOutlet UILabel *pathLabel;
+@property (nonatomic, retain) IBOutlet UILabel *directionLabel;
 
 @property (nonatomic, retain) NSTimer *refreshTimer;
 
