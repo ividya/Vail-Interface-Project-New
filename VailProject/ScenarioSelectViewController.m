@@ -64,6 +64,11 @@
 }
 
 - (IBAction)goNavigation:(id)sender{
+    
+    [[InterfaceVariableManager sharedManager] setDistance:0.0];
+    [[InterfaceVariableManager sharedManager] setSpeed:0.0];
+    [[InterfaceVariableManager sharedManager] setLane:2];
+    
     PathNavigationViewController *nController =[[PathNavigationViewController alloc] initWithNibName:@"PathNavigationViewController" bundle:nil];
     [self.navigationController pushViewController:nController animated:YES];
     [nController release];
