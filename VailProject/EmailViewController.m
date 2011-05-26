@@ -180,8 +180,11 @@
     self.firstEmailButton.hidden = YES;
     self.secondEmailButton.hidden = YES;
     
-    if ([EmailManager instance].tutorialMode)
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:1];
+    if ([EmailManager instance].tutorialMode){
+        [ViewEffects popupAlertViewWithMsg:@"Your goal is to delete spam mails and respond to other emails.\n\n Email containing event information must be added to calendar as well." targetViewController:self forDuration:10];
+        
+        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:12];
+    }
     else
         [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:20];
 }

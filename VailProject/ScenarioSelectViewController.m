@@ -134,9 +134,9 @@
     EmailModel *emailModel;
     emailModel = [[[EmailModel alloc] init] autorelease];
     emailModel.sender = @"Tutorial";
-    emailModel.subject = @"Subject 1";
+    emailModel.subject = @"Event information";
     emailModel.date = @"1:00 PM";
-    emailModel.body = @"This email can be added to calendar and be responded. Try both of these commands.";
+    emailModel.body = @"This is a regular mail. Send a reply message and then add to calendar.";
     emailModel.eventHour = @"1";
     emailModel.eventMin = @"00";
     emailModel.eventTitle = @"Some Event";
@@ -149,10 +149,10 @@
     [emailModelArray insertObject:emailModel atIndex:0];
     
     emailModel = [[[EmailModel alloc] init] autorelease];
-    emailModel.sender = @"Tutorial2";
+    emailModel.sender = @"SPAM";
     emailModel.subject = @"Test Email";
     emailModel.date = @"1:15 PM";
-    emailModel.body = @"This is a deletable email.";
+    emailModel.body = @"This is a spam mail. Delete this email.";
     emailModel.headingSoundFile = @"htest1";
     emailModel.contentSoundFile = @"btest1";
     emailModel.newmail = YES;
