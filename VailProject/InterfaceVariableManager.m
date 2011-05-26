@@ -12,6 +12,8 @@
 
 @implementation InterfaceVariableManager
 @synthesize distance=_distance;
+@synthesize speed=_speed;
+@synthesize lane=_lane;
 @synthesize testId=_testId;
 @synthesize testMode=_testMode;
 @synthesize displayMode=_displayMode;
@@ -57,6 +59,10 @@ static id sharedManager = nil;
         if( [subtestParam integerValue] == NAVIGATION_MODE && [eventParam isEqualToString:@"PATH"]){            
             if ([[_controllers objectForKey:PATH_SELECTION_ADMIN] respondsToSelector:@selector(receiveVoiceFeedback:)] )
                  [[_controllers objectForKey:PATH_SELECTION_ADMIN] performSelectorOnMainThread:@selector(receiveVoiceFeedback:) withObject:params waitUntilDone:NO];            
+            NSLog(@"post sent\n");
+        }else if( [subtestParam integerValue] == NAVIGATION_MODE && [eventParam isEqualToString:@"DESTINATION"]){            
+            if ([[_controllers objectForKey:DESTINATION_SELECTION_ADMIN] respondsToSelector:@selector(receiveVoiceFeedback:)] )
+                [[_controllers objectForKey:DESTINATION_SELECTION_ADMIN] performSelectorOnMainThread:@selector(receiveVoiceFeedback:) withObject:params waitUntilDone:NO];             
             NSLog(@"post sent\n");
         }
         else if([subtestParam integerValue] == EMAIL_MODE){

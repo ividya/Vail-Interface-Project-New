@@ -30,14 +30,19 @@ typedef enum
 
 
 #define PATH_SELECTION_ADMIN @"PATH_SELECTION_ADMIN"
+#define DESTINATION_SELECTION_ADMIN @"DESTINATION_SELECTION_ADMIN"
+
 #define EMAIL_ADMIN @"EMAIL_ADMIN"
 #define CONFIG_ADMIN @"CONFIG_ADMIN"
 #define SCENARIO_ADMIN @"SCENARIO_ADMIN"
+
 
 @interface InterfaceVariableManager : NSObject {
 }
 
 @property double distance;
+@property double speed;
+@property int lane;
 @property (retain)  NSString *testId;
 @property DisplayMode  displayMode;
 @property FeedbackMode  feedbackMode;

@@ -18,6 +18,21 @@
 		2F28B39F1372962800A33254 /* turnright.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F28B39D1372962800A33254 /* turnright.mp3 */; };
 		2F28B3A01372962800A33254 /* turnleft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F28B39E1372962800A33254 /* turnleft.mp3 */; };
 		2F28B3A31372A59E00A33254 /* VailUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B3A21372A59E00A33254 /* VailUtility.m */; };
+		2F2AE05F138DD36C00DF6828 /* DestinationSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AE05A138DD36C00DF6828 /* DestinationSuggestionViewController.m */; };
+		2F2AE060138DD36C00DF6828 /* DestinationSuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE05B138DD36C00DF6828 /* DestinationSuggestionViewController.xib */; };
+		2F2AE061138DD36C00DF6828 /* AlertCollisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AE05D138DD36C00DF6828 /* AlertCollisionViewController.m */; };
+		2F2AE062138DD36C00DF6828 /* AlertCollisionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE05E138DD36C00DF6828 /* AlertCollisionViewController.xib */; };
+		2F2AE067138DD37E00DF6828 /* dq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE064138DD37E00DF6828 /* dq.mp3 */; };
+		2F2AE068138DD37E00DF6828 /* cpselected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE065138DD37E00DF6828 /* cpselected.mp3 */; };
+		2F2AE069138DD37E00DF6828 /* cfselected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE066138DD37E00DF6828 /* cfselected.mp3 */; };
+		2F2AE06C138DD39A00DF6828 /* toleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE06A138DD39A00DF6828 /* toleft.png */; };
+		2F2AE06D138DD39A00DF6828 /* toright.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE06B138DD39A00DF6828 /* toright.png */; };
+		2F2AE077138DD42000DF6828 /* SelectPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AE06F138DD41F00DF6828 /* SelectPathViewController.m */; };
+		2F2AE078138DD42000DF6828 /* SelectPathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE070138DD41F00DF6828 /* SelectPathViewController.xib */; };
+		2F2AE079138DD42000DF6828 /* PathNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AE072138DD41F00DF6828 /* PathNavigationViewController.m */; };
+		2F2AE07A138DD42000DF6828 /* PathNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE073138DD41F00DF6828 /* PathNavigationViewController.xib */; };
+		2F2AE07B138DD42000DF6828 /* AdminNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AE075138DD41F00DF6828 /* AdminNavigationViewController.m */; };
+		2F2AE07C138DD42000DF6828 /* AdminNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE076138DD41F00DF6828 /* AdminNavigationViewController.xib */; };
 		2F2F798D136E9E6300FBF949 /* TestMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F798B136E9E6300FBF949 /* TestMethodViewController.m */; };
 		2F2F798E136E9E6300FBF949 /* TestMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2F798C136E9E6300FBF949 /* TestMethodViewController.xib */; };
 		2F2F7993136E9E7F00FBF949 /* ScenarioSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F7991136E9E7F00FBF949 /* ScenarioSelectViewController.m */; };
@@ -45,15 +60,9 @@
 		2F4C5229136E877300561E0E /* VailProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C5227136E877300561E0E /* VailProject.xcdatamodeld */; };
 		2F4C522F136E924B00561E0E /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C522D136E924B00561E0E /* IntroViewController.m */; };
 		2F4C5230136E924B00561E0E /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4C522E136E924B00561E0E /* IntroViewController.xib */; };
-		2F535972136FEFC70006D89A /* SelectPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F535970136FEFC70006D89A /* SelectPathViewController.m */; };
-		2F535973136FEFC70006D89A /* SelectPathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F535971136FEFC70006D89A /* SelectPathViewController.xib */; };
-		2F535977136FF01E0006D89A /* PathNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F535975136FF01D0006D89A /* PathNavigationViewController.m */; };
-		2F535978136FF01E0006D89A /* PathNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F535976136FF01D0006D89A /* PathNavigationViewController.xib */; };
 		2F53597D1371478E0006D89A /* InterfaceVariableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53597C1371478D0006D89A /* InterfaceVariableManager.m */; };
 		2F53598F137164320006D89A /* VailEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53598E137164310006D89A /* VailEvent.m */; };
 		2F535993137169130006D89A /* AdminModeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F535991137169120006D89A /* AdminModeSelectViewController.m */; };
-		2F53599813716BF60006D89A /* AdminNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53599613716BF60006D89A /* AdminNavigationViewController.m */; };
-		2F53599913716BF60006D89A /* AdminNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F53599713716BF60006D89A /* AdminNavigationViewController.xib */; };
 		2F658B401372D3DC000EE5C1 /* EmailBodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F658B331372D3DC000EE5C1 /* EmailBodyViewController.m */; };
 		2F658B411372D3DC000EE5C1 /* EmailBodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F658B341372D3DC000EE5C1 /* EmailBodyViewController.xib */; };
 		2F658B421372D3DC000EE5C1 /* EmailListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F658B351372D3DC000EE5C1 /* EmailListCell.xib */; };
@@ -188,6 +197,26 @@
 		2F28B39E1372962800A33254 /* turnleft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = turnleft.mp3; sourceTree = "<group>"; };
 		2F28B3A11372A59E00A33254 /* VailUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VailUtility.h; sourceTree = "<group>"; };
 		2F28B3A21372A59E00A33254 /* VailUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VailUtility.m; sourceTree = "<group>"; };
+		2F2AE059138DD36C00DF6828 /* DestinationSuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationSuggestionViewController.h; sourceTree = "<group>"; };
+		2F2AE05A138DD36C00DF6828 /* DestinationSuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationSuggestionViewController.m; sourceTree = "<group>"; };
+		2F2AE05B138DD36C00DF6828 /* DestinationSuggestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DestinationSuggestionViewController.xib; sourceTree = "<group>"; };
+		2F2AE05C138DD36C00DF6828 /* AlertCollisionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertCollisionViewController.h; sourceTree = "<group>"; };
+		2F2AE05D138DD36C00DF6828 /* AlertCollisionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCollisionViewController.m; sourceTree = "<group>"; };
+		2F2AE05E138DD36C00DF6828 /* AlertCollisionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertCollisionViewController.xib; sourceTree = "<group>"; };
+		2F2AE064138DD37E00DF6828 /* dq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dq.mp3; sourceTree = "<group>"; };
+		2F2AE065138DD37E00DF6828 /* cpselected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cpselected.mp3; sourceTree = "<group>"; };
+		2F2AE066138DD37E00DF6828 /* cfselected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cfselected.mp3; sourceTree = "<group>"; };
+		2F2AE06A138DD39A00DF6828 /* toleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toleft.png; sourceTree = "<group>"; };
+		2F2AE06B138DD39A00DF6828 /* toright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toright.png; sourceTree = "<group>"; };
+		2F2AE06E138DD41F00DF6828 /* SelectPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPathViewController.h; sourceTree = "<group>"; };
+		2F2AE06F138DD41F00DF6828 /* SelectPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPathViewController.m; sourceTree = "<group>"; };
+		2F2AE070138DD41F00DF6828 /* SelectPathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPathViewController.xib; sourceTree = "<group>"; };
+		2F2AE071138DD41F00DF6828 /* PathNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathNavigationViewController.h; sourceTree = "<group>"; };
+		2F2AE072138DD41F00DF6828 /* PathNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathNavigationViewController.m; sourceTree = "<group>"; };
+		2F2AE073138DD41F00DF6828 /* PathNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathNavigationViewController.xib; sourceTree = "<group>"; };
+		2F2AE074138DD41F00DF6828 /* AdminNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminNavigationViewController.h; sourceTree = "<group>"; };
+		2F2AE075138DD41F00DF6828 /* AdminNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminNavigationViewController.m; sourceTree = "<group>"; };
+		2F2AE076138DD41F00DF6828 /* AdminNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminNavigationViewController.xib; sourceTree = "<group>"; };
 		2F2F798A136E9E6300FBF949 /* TestMethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMethodViewController.h; sourceTree = "<group>"; };
 		2F2F798B136E9E6300FBF949 /* TestMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMethodViewController.m; sourceTree = "<group>"; };
 		2F2F798C136E9E6300FBF949 /* TestMethodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestMethodViewController.xib; sourceTree = "<group>"; };
@@ -238,21 +267,12 @@
 		2F4C522C136E924B00561E0E /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		2F4C522D136E924B00561E0E /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		2F4C522E136E924B00561E0E /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
-		2F53596F136FEFC70006D89A /* SelectPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPathViewController.h; sourceTree = "<group>"; };
-		2F535970136FEFC70006D89A /* SelectPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPathViewController.m; sourceTree = "<group>"; };
-		2F535971136FEFC70006D89A /* SelectPathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPathViewController.xib; sourceTree = "<group>"; };
-		2F535974136FF01D0006D89A /* PathNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathNavigationViewController.h; sourceTree = "<group>"; };
-		2F535975136FF01D0006D89A /* PathNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathNavigationViewController.m; sourceTree = "<group>"; };
-		2F535976136FF01D0006D89A /* PathNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathNavigationViewController.xib; sourceTree = "<group>"; };
 		2F53597B1371478C0006D89A /* InterfaceVariableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceVariableManager.h; sourceTree = "<group>"; };
 		2F53597C1371478D0006D89A /* InterfaceVariableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceVariableManager.m; sourceTree = "<group>"; };
 		2F53598D137164310006D89A /* VailEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VailEvent.h; sourceTree = "<group>"; };
 		2F53598E137164310006D89A /* VailEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VailEvent.m; sourceTree = "<group>"; };
 		2F535990137169110006D89A /* AdminModeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminModeSelectViewController.h; sourceTree = "<group>"; };
 		2F535991137169120006D89A /* AdminModeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminModeSelectViewController.m; sourceTree = "<group>"; };
-		2F53599513716BF60006D89A /* AdminNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminNavigationViewController.h; sourceTree = "<group>"; };
-		2F53599613716BF60006D89A /* AdminNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminNavigationViewController.m; sourceTree = "<group>"; };
-		2F53599713716BF60006D89A /* AdminNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminNavigationViewController.xib; sourceTree = "<group>"; };
 		2F658B321372D3DC000EE5C1 /* EmailBodyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailBodyViewController.h; sourceTree = "<group>"; };
 		2F658B331372D3DC000EE5C1 /* EmailBodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailBodyViewController.m; sourceTree = "<group>"; };
 		2F658B341372D3DC000EE5C1 /* EmailBodyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmailBodyViewController.xib; sourceTree = "<group>"; };
@@ -430,15 +450,21 @@
 		2F4C522A136E8E2900561E0E /* NavigationTest */ = {
 			isa = PBXGroup;
 			children = (
-				2F53596F136FEFC70006D89A /* SelectPathViewController.h */,
-				2F535970136FEFC70006D89A /* SelectPathViewController.m */,
-				2F535971136FEFC70006D89A /* SelectPathViewController.xib */,
-				2F535974136FF01D0006D89A /* PathNavigationViewController.h */,
-				2F535975136FF01D0006D89A /* PathNavigationViewController.m */,
-				2F535976136FF01D0006D89A /* PathNavigationViewController.xib */,
-				2F53599513716BF60006D89A /* AdminNavigationViewController.h */,
-				2F53599613716BF60006D89A /* AdminNavigationViewController.m */,
-				2F53599713716BF60006D89A /* AdminNavigationViewController.xib */,
+				2F2AE06E138DD41F00DF6828 /* SelectPathViewController.h */,
+				2F2AE06F138DD41F00DF6828 /* SelectPathViewController.m */,
+				2F2AE070138DD41F00DF6828 /* SelectPathViewController.xib */,
+				2F2AE071138DD41F00DF6828 /* PathNavigationViewController.h */,
+				2F2AE072138DD41F00DF6828 /* PathNavigationViewController.m */,
+				2F2AE073138DD41F00DF6828 /* PathNavigationViewController.xib */,
+				2F2AE074138DD41F00DF6828 /* AdminNavigationViewController.h */,
+				2F2AE075138DD41F00DF6828 /* AdminNavigationViewController.m */,
+				2F2AE076138DD41F00DF6828 /* AdminNavigationViewController.xib */,
+				2F2AE059138DD36C00DF6828 /* DestinationSuggestionViewController.h */,
+				2F2AE05A138DD36C00DF6828 /* DestinationSuggestionViewController.m */,
+				2F2AE05B138DD36C00DF6828 /* DestinationSuggestionViewController.xib */,
+				2F2AE05C138DD36C00DF6828 /* AlertCollisionViewController.h */,
+				2F2AE05D138DD36C00DF6828 /* AlertCollisionViewController.m */,
+				2F2AE05E138DD36C00DF6828 /* AlertCollisionViewController.xib */,
 			);
 			name = NavigationTest;
 			sourceTree = "<group>";
@@ -468,6 +494,8 @@
 		2F535979137135FB0006D89A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2F2AE06A138DD39A00DF6828 /* toleft.png */,
+				2F2AE06B138DD39A00DF6828 /* toright.png */,
 				9E0D5F841386571700E2B7DA /* whiteButton.png */,
 				2F1DDAA31371A798004F9AFB /* left.png */,
 				2F1DDAA41371A798004F9AFB /* right.png */,
@@ -482,6 +510,9 @@
 		2F53597A137136200006D89A /* voices */ = {
 			isa = PBXGroup;
 			children = (
+				2F2AE064138DD37E00DF6828 /* dq.mp3 */,
+				2F2AE065138DD37E00DF6828 /* cpselected.mp3 */,
+				2F2AE066138DD37E00DF6828 /* cfselected.mp3 */,
 				9E30CEBF138CDE4900791E87 /* replymessagesent.mp3 */,
 				9E086D9D138CCD6F006D73A9 /* openingemail.mp3 */,
 				9E086D95138CB367006D73A9 /* emaillist.mp3 */,
@@ -846,9 +877,6 @@
 				2F4C5230136E924B00561E0E /* IntroViewController.xib in Resources */,
 				2F2F798E136E9E6300FBF949 /* TestMethodViewController.xib in Resources */,
 				2F2F7994136E9E7F00FBF949 /* ScenarioSelectViewController.xib in Resources */,
-				2F535973136FEFC70006D89A /* SelectPathViewController.xib in Resources */,
-				2F535978136FF01E0006D89A /* PathNavigationViewController.xib in Resources */,
-				2F53599913716BF60006D89A /* AdminNavigationViewController.xib in Resources */,
 				2F1DDA9C13717B60004F9AFB /* speaker.png in Resources */,
 				2F1DDA9D13717B60004F9AFB /* mic.png in Resources */,
 				2F1DDAA2137184C7004F9AFB /* nav_map.png in Resources */,
@@ -945,6 +973,16 @@
 				9E086DA4138CCE4E006D73A9 /* FinishView.xib in Resources */,
 				9E30CEC0138CDE4900791E87 /* replymessagesent.mp3 in Resources */,
 				9E30CEC3138CEC0900791E87 /* htest1.mp3 in Resources */,
+				2F2AE060138DD36C00DF6828 /* DestinationSuggestionViewController.xib in Resources */,
+				2F2AE062138DD36C00DF6828 /* AlertCollisionViewController.xib in Resources */,
+				2F2AE067138DD37E00DF6828 /* dq.mp3 in Resources */,
+				2F2AE068138DD37E00DF6828 /* cpselected.mp3 in Resources */,
+				2F2AE069138DD37E00DF6828 /* cfselected.mp3 in Resources */,
+				2F2AE06C138DD39A00DF6828 /* toleft.png in Resources */,
+				2F2AE06D138DD39A00DF6828 /* toright.png in Resources */,
+				2F2AE078138DD42000DF6828 /* SelectPathViewController.xib in Resources */,
+				2F2AE07A138DD42000DF6828 /* PathNavigationViewController.xib in Resources */,
+				2F2AE07C138DD42000DF6828 /* AdminNavigationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,12 +1017,9 @@
 				2F2F79C8136EA67600FBF949 /* HTTPServer.m in Sources */,
 				2F2F79C9136EA67600FBF949 /* WebSocket.m in Sources */,
 				2F2F79CC136EA69800FBF949 /* GCDAsyncSocket.m in Sources */,
-				2F535972136FEFC70006D89A /* SelectPathViewController.m in Sources */,
-				2F535977136FF01E0006D89A /* PathNavigationViewController.m in Sources */,
 				2F53597D1371478E0006D89A /* InterfaceVariableManager.m in Sources */,
 				2F53598F137164320006D89A /* VailEvent.m in Sources */,
 				2F535993137169130006D89A /* AdminModeSelectViewController.m in Sources */,
-				2F53599813716BF60006D89A /* AdminNavigationViewController.m in Sources */,
 				2F28B3A31372A59E00A33254 /* VailUtility.m in Sources */,
 				2F658B401372D3DC000EE5C1 /* EmailBodyViewController.m in Sources */,
 				2F658B431372D3DC000EE5C1 /* EmailModel.m in Sources */,
@@ -1007,6 +1042,11 @@
 				9EA1321A138695C000620F46 /* ViewEffects.m in Sources */,
 				9EA62C581389EC67001D1D17 /* CustomAlertViewController.m in Sources */,
 				9E34892F138AB3AF0048F070 /* AdminScenarioSelectViewController.m in Sources */,
+				2F2AE05F138DD36C00DF6828 /* DestinationSuggestionViewController.m in Sources */,
+				2F2AE061138DD36C00DF6828 /* AlertCollisionViewController.m in Sources */,
+				2F2AE077138DD42000DF6828 /* SelectPathViewController.m in Sources */,
+				2F2AE079138DD42000DF6828 /* PathNavigationViewController.m in Sources */,
+				2F2AE07B138DD42000DF6828 /* AdminNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
