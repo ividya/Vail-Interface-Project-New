@@ -19,6 +19,8 @@
 
 - (IBAction)selectAPath;
 - (IBAction)selectBPath;
+- (IBAction)selectCafePath;
+- (IBAction)selectCampusPath;
 - (IBAction)increaseDistance;
 
 

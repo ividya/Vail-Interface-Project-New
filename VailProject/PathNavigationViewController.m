@@ -10,11 +10,10 @@
 #import "InterfaceVariableManager.h"
 #import "SelectPathViewController.h"
 #import <AVFoundation/AVAudioPlayer.h>
-
+#import "AlertCollisionViewController.h"
 
 #define MIN_INDICATING_DISTANCE_TURN 250
-#define MIN_INDICATING_DISTANCE_STRAIGHT 500
-
+#define MIN_INDICATING_DISTANCE_STRAIGHT 1000
 
 @implementation PathNavigationViewController
 @synthesize micView=_micView;
@@ -66,56 +65,26 @@
         _pathLabel.text = @"PATH A Selected";
     }else if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY && [_pathValue isEqualToString:@"B"]){
         _pathLabel.text = @"PATH B Selected";
+    }else if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY && [_pathValue isEqualToString:@"CAMPUS"]){
+        _pathLabel.text = @"PATH to Campus";
+    }else if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY && [_pathValue isEqualToString:@"CAFE"]){
+        _pathLabel.text = @"PATH to Brunch Cafe";
     }else{
         _pathLabel.text = @"";
     }
     
-    if([_pathValue isEqualToString:@"A"]){
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:0]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:1000]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:1485]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:2000]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:2735]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:3500]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:4485]];
-        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:6500]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:7000]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:8750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:9750]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:11750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:12735]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:13335]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:14335]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:16750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:17750]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:19750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:20750]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:21750]];
-        [prospectedEvent setObject:@"E" forKey:[NSNumber numberWithDouble:22700]];
-    }else{
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:0]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:1000]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:1485]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:2000]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:2735]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:3500]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:4485]];
-        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:6500]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:7000]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:8750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:9750]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:11750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:12735]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:13335]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:14335]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:16750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:17750]];
-        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:19750]];        
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:20750]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:21750]];
-        [prospectedEvent setObject:@"E" forKey:[NSNumber numberWithDouble:22700]];
-
-    }
+        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:1800]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:3000]];
+        [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:3800]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:5000]];
+        [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:5500]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:6000]];
+        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:8800]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:10000]];
+        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:11000]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:11500]];
+      
     
     double currentDistance = [[InterfaceVariableManager sharedManager] distance];
     NSArray *keys = [[[prospectedEvent keyEnumerator] allObjects] sortedArrayUsingSelector:@selector(compare:)];
@@ -174,6 +143,22 @@
         [_refreshTimer invalidate];
         //[refreshTimer release];
         SelectPathViewController *nController =[[SelectPathViewController alloc] initWithNibName:@"SelectPathViewController" bundle:nil];
+        [self.navigationController pushViewController:nController animated:YES];
+        [nController release];
+    }else if([lastEvent isEqualToString:@"CR"]){
+        [_refreshTimer invalidate];
+        //[refreshTimer release];
+        AlertCollisionViewController *nController =[[AlertCollisionViewController alloc] initWithNibName:@"AlertCollisionViewController" bundle:nil];
+        nController.isRight = YES;
+        nController.currentLane = [[InterfaceVariableManager sharedManager] lane];
+        [self.navigationController pushViewController:nController animated:YES];
+        [nController release];
+    }else if([lastEvent isEqualToString:@"CL"]){
+        [_refreshTimer invalidate];
+        //[refreshTimer release];
+        AlertCollisionViewController *nController =[[AlertCollisionViewController alloc] initWithNibName:@"AlertCollisionViewController" bundle:nil];
+        nController.isRight = NO;
+        nController.currentLane = [[InterfaceVariableManager sharedManager] lane];
         [self.navigationController pushViewController:nController animated:YES];
         [nController release];
     }else if([lastEvent isEqualToString:@"E"]){

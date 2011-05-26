@@ -101,6 +101,46 @@
     }
 }
 
+- (IBAction)selectCafePath{
+    NSString *ipaddress = [[InterfaceVariableManager sharedManager] clientIP];
+    NSString *port = [[InterfaceVariableManager sharedManager] clientPort];
+    NSString *subtest = [NSString stringWithFormat:@"%d",NAVIGATION_MODE];
+    NSString *event = @"DESTINATION";
+    NSString *result = @"CAFE";
+    NSString *time = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+    
+    NSString *url = [NSString stringWithFormat:@"http://%@:%@/admin?subtest=%@&event=%@&result=%@&time=%@",ipaddress,port,subtest,event,result,time];
+    if(![VailUtility sendHTTP:url]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                        message:@"Command Failed"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:nil]; 
+        [alert show];
+        [alert release]; 
+    }
+}
+
+- (IBAction)selectCampusPath{
+    NSString *ipaddress = [[InterfaceVariableManager sharedManager] clientIP];
+    NSString *port = [[InterfaceVariableManager sharedManager] clientPort];
+    NSString *subtest = [NSString stringWithFormat:@"%d",NAVIGATION_MODE];
+    NSString *event = @"DESTINATION";
+    NSString *result = @"CAMPUS";
+    NSString *time = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+    
+    NSString *url = [NSString stringWithFormat:@"http://%@:%@/admin?subtest=%@&event=%@&result=%@&time=%@",ipaddress,port,subtest,event,result,time];
+    if(![VailUtility sendHTTP:url]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                        message:@"Command Failed"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:nil]; 
+        [alert show];
+        [alert release];
+    }
+}
+
 - (IBAction)increaseDistance{
     NSString *ipaddress = [[InterfaceVariableManager sharedManager] clientIP];
     NSString *port = [[InterfaceVariableManager sharedManager] clientPort];

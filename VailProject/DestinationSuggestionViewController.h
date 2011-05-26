@@ -1,8 +1,8 @@
 //
-//  SelectPathViewController.h
+//  DestinationSuggestionViewController.h
 //  VailProject
 //
-//  Created by Jeongjin on 5/3/11.
+//  Created by Jeongjin on 5/23/11.
 //  Copyright 2011 Stanford. All rights reserved.
 //
 
@@ -10,12 +10,10 @@
 #import <AVFoundation/AVAudioPlayer.h>
 
 @class PathNavigationViewController;
-
-@interface SelectPathViewController : UIViewController <AVAudioPlayerDelegate>{
+@interface DestinationSuggestionViewController : UIViewController <AVAudioPlayerDelegate> {
     NSTimer *voiceTimer;
     PathNavigationViewController *nController;
 }
-
 @property (nonatomic, retain) IBOutlet UIView *screenDisplayView;
 @property (nonatomic, retain) IBOutlet UIView *voiceDisplayView;
 @property (nonatomic, retain) IBOutlet UIView *screenFeedbackView;
@@ -26,7 +24,9 @@
 @property (nonatomic, retain) AVAudioPlayer *player;
 @property (nonatomic, retain) AVAudioPlayer *pathPlayer;
 
+
 - (IBAction)selectPathButton:(id)sender;
 - (void)receiveVoiceFeedback:(id) params;
+
 
 @end

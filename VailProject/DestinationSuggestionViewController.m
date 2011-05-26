@@ -1,20 +1,17 @@
 //
-//  SelectPathViewController.m
+//  DestinationSuggestionViewController.m
 //  VailProject
 //
-//  Created by Jeongjin on 5/3/11.
+//  Created by Jeongjin on 5/23/11.
 //  Copyright 2011 Stanford. All rights reserved.
 //
 
-#import "SelectPathViewController.h"
+#import "DestinationSuggestionViewController.h"
 #import "InterfaceVariableManager.h"
 #import "PathNavigationViewController.h"
-#import "InterfaceVariableManager.h"
-#import "VailEvent.h"
-#import <AVFoundation/AVAudioPlayer.h>
 
+@implementation DestinationSuggestionViewController
 
-@implementation SelectPathViewController
 @synthesize screenDisplayView=_screenDisplayView;
 @synthesize screenFeedbackView=_screenFeedbackView;
 @synthesize voiceDisplayView=_voiceDisplayView;
@@ -22,9 +19,9 @@
 
 @synthesize APathButton=_APathButton;
 @synthesize BPathButton=_BPathButton;
+
 @synthesize player=_player;
 @synthesize pathPlayer=_pathPlayer;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +34,6 @@
 
 - (void)dealloc
 {
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }
 
@@ -54,11 +50,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     
     // Hide Back
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
-    [[InterfaceVariableManager sharedManager] registerController:PATH_SELECTION_ADMIN controller:self];
+    [[InterfaceVariableManager sharedManager] registerController:DESTINATION_SELECTION_ADMIN controller:self];
     
     // Do any additional setup after loading the view from its nib.
     if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
@@ -68,7 +65,7 @@
         _screenDisplayView.hidden = YES;
         _voiceDisplayView.hidden = NO;
         
-        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"pathq" ofType:@"mp3"];
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"dq" ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [_player release];
         [_player play];
@@ -84,7 +81,6 @@
     } 
 }
 
-//- (void)receiveVoiceFeedback:(NSNotification*) aNotification
 - (void)receiveVoiceFeedback:(id) params
 {
     NSString *subtestParam = (NSString*)[params objectForKey:@"subtest"];
@@ -96,18 +92,18 @@
     }
     
     [[InterfaceVariableManager sharedManager] saveEvent:[subtestParam integerValue] event:eventParam result:resultParam time:[NSDate dateWithTimeIntervalSince1970:[timeParam doubleValue]]];
-        
+    
     nController =[[PathNavigationViewController alloc] initWithNibName:@"PathNavigationViewController" bundle:nil];
     NSString *soundPath = nil;
-
-    if([resultParam isEqualToString:@"A"]){
-        nController.pathValue = @"A";
-        soundPath = [[NSBundle mainBundle] pathForResource:@"aselected" ofType:@"mp3"];
-
+    
+    if([resultParam isEqualToString:@"CAMPUS"]){
+        nController.pathValue = @"CAMPUS"; 
+        soundPath = [[NSBundle mainBundle] pathForResource:@"cpselected" ofType:@"mp3"];
+        
     }else{
-        nController.pathValue = @"B";
-        soundPath = [[NSBundle mainBundle] pathForResource:@"bselected" ofType:@"mp3"];
-
+        nController.pathValue = @"CAFE";
+        soundPath = [[NSBundle mainBundle] pathForResource:@"cfelected" ofType:@"mp3"];
+        
     }
     
     if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY){
@@ -121,7 +117,7 @@
     }
     
 }
- 
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -139,14 +135,14 @@
     nController =[[PathNavigationViewController alloc] initWithNibName:@"PathNavigationViewController" bundle:nil];
     NSString *soundPath = nil;
     if([sender isEqual:_APathButton]){
-        nController.pathValue = @"A";
-        [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event:@"PATH" result:@"A" time:[NSDate date]];
-        soundPath = [[NSBundle mainBundle] pathForResource:@"aselected" ofType:@"mp3"];
-
+        nController.pathValue = @"CAMPUS";
+        [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event:@"DESTINATION" result:@"CAMPUS" time:[NSDate date]];
+        soundPath = [[NSBundle mainBundle] pathForResource:@"cpselected" ofType:@"mp3"];
+        
     }else{
-        nController.pathValue = @"B";
-        [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event:@"PATH" result:@"B" time:[NSDate date]];
-        soundPath = [[NSBundle mainBundle] pathForResource:@"bselected" ofType:@"mp3"];
+        nController.pathValue = @"CAFE";
+        [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event:@"DESTINATION" result:@"CAFE" time:[NSDate date]];
+        soundPath = [[NSBundle mainBundle] pathForResource:@"cfselected" ofType:@"mp3"];
     }
     
     if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY){
@@ -161,7 +157,7 @@
     
     
 }
- 
+
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag 
 {
     if (player == _pathPlayer){
@@ -169,6 +165,5 @@
         [nController release];
     }
 }
-
 
 @end
