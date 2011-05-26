@@ -84,6 +84,18 @@
     [emailModelArray removeAllObjects];
     
     EmailModel *emailModel;
+    emailModel = [[[EmailModel alloc] init] autorelease];    
+    emailModel.sender = @"SPAM";
+    emailModel.subject = @"Survey for COMM168";
+    emailModel.date = @"5:30 AM";
+    emailModel.body = @"How do you like the experiment? Support our project by inviting your friends.";
+    emailModel.headingSoundFile = @"h0";
+    emailModel.contentSoundFile = @"b0";
+    emailModel.newmail = YES;
+    emailModel.mustDelete = YES;
+    emailModel.emailIndex = 1;
+    [emailModelArray insertObject:emailModel atIndex:0];
+
     emailModel = [[[EmailModel alloc] init] autorelease];
     emailModel.sender = @"Bob";
     emailModel.subject = @"Important Meeting";
@@ -97,21 +109,9 @@
     emailModel.eventSoundFile = @"e2";
     emailModel.newmail = YES;
     emailModel.undeletable = YES;
-    emailModel.emailIndex = 1;
-    [emailModelArray insertObject:emailModel atIndex:0];
-    
-    emailModel = [[[EmailModel alloc] init] autorelease];    
-    emailModel.sender = @"SPAM";
-    emailModel.subject = @"Survey for COMM168";
-    emailModel.date = @"5:30 AM";
-    emailModel.body = @"How do you like the experiment? Support our project by inviting your friends.";
-    emailModel.headingSoundFile = @"h0";
-    emailModel.contentSoundFile = @"b0";
-    emailModel.newmail = YES;
-    emailModel.mustDelete = YES;
     emailModel.emailIndex = 0;
     [emailModelArray insertObject:emailModel atIndex:0];
-
+    
     
     // Create calendar model
 //    CalendarEventModel *event = [[CalendarEventModel alloc] init];
