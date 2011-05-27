@@ -29,6 +29,7 @@
     UIView *finishView;
     
     UIView *simpleButtonView;
+    NSTimer *refreshTimer;
 }
 
 - (void)repeatEmail:(id) param;
@@ -44,6 +45,7 @@
 - (void)yes:(id) param;
 - (void)no:(id) param;
 - (void) returnToMainMenu: (id) param;
+- (void) refreshEvent;
 
 @property (nonatomic, assign) IBOutlet UITableViewCell *listCell;
 @property (nonatomic, retain) AVAudioPlayer *player;
@@ -54,6 +56,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *repeatButton;
 @property (nonatomic, retain) UIView *startView;
 @property (nonatomic, retain) UIView *finishView;
+@property (nonatomic, retain) NSTimer *refreshTimer;
 - (IBAction)firstEmailAction:(id)sender;
 - (IBAction)secondEmailAction:(id)sender;
 - (IBAction)repeatAction:(id)sender;

@@ -141,7 +141,7 @@
     emailModel.sender = @"Tutorial";
     emailModel.subject = @"Event information";
     emailModel.date = @"1:00 PM";
-    emailModel.body = @"This is a event mail. Send a reply message and then add to calendar.";
+    emailModel.body = @"This is an event mail. Send a reply message and also add it to calendar.";
     emailModel.eventHour = @"1";
     emailModel.eventMin = @"00";
     emailModel.eventTitle = @"Some Event";

@@ -24,6 +24,7 @@
 @synthesize player=_player;
 @synthesize startView;
 @synthesize finishView;
+@synthesize refreshTimer;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -172,18 +173,17 @@
         
     
     if ([EmailManager instance].tutorialMode){
-        NSMutableString *helpMsg = [NSMutableString stringWithString:@"Your goal is to delete spam mails and respond to other emails.\n\n Email containing event information must be added to calendar as well.\n\n"];
+        NSMutableString *helpMsg = [NSMutableString stringWithString:@"There are three tasks.\n 1. Delete advertisement mails.\n 2. Reply to all other mails.\n 3. If an email contains event information, add it to calendar."];
         
-
         if([varMan feedbackMode] == VOICE_FEEDBACK) {
-            [helpMsg appendString:@"At any time say \"Repeat\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
+            [helpMsg appendString:@"At any time say \"Listen Again\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
         }
         [ViewEffects popupAlertViewWithMsg:helpMsg targetViewController:self forDuration:7];
         
         [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:8];
     }
-    else
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:1];
+    
+    self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshEvent) userInfo:nil repeats:YES];
 }
 
 - (void)viewDidUnload
@@ -243,7 +243,7 @@
             
             [ViewEffects showView:self.finishView targetView:self.tableView];
             [ViewEffects hideView:self.finishView delay:10];
-            [self performSelector:@selector(returnToMainMenu:) withObject:nil afterDelay:10];
+            [self performSelector:@selector(returnToMainMenu:) withObject:nil afterDelay:5];
             return;
         }
         
@@ -251,12 +251,8 @@
         
         [self.view addSubview:blackView];
         
-        [[EmailManager instance] addMoreEmails];
-        
         self.firstEmailButton.hidden = YES;
         self.secondEmailButton.hidden = YES;        
-        
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:45];
         return;
 
     }
@@ -482,6 +478,23 @@
 - (void) returnToMainMenu: (id) param
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void) refreshEvent
+{
+    double currentDistance = [[InterfaceVariableManager sharedManager] distance];
+
+    if (currentDistance > 2700 && !receivedEmail) {
+        receivedEmail = YES;
+        [self addNewEmails:nil];
+    }
+    
+    
+    if (currentDistance > 7000 && stage1complete) {
+        [[EmailManager instance] addMoreEmails];
+        [self addNewEmails:nil];
+        [refreshTimer invalidate];
+    }
 }
 
 #pragma mark - Table view data source
