@@ -79,6 +79,7 @@
             soundPath = [[NSBundle mainBundle] pathForResource:@"lcollision" ofType:@"mp3"];
         }
         alertPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        alertPlayer.delegate = self;
         [alertPlayer play];
 
     }
@@ -177,6 +178,7 @@
     
     if (player == alertPlayer){
         [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event: [NSString stringWithFormat:@"COLLISION_ASKED_%f",startDistance] result:@"SUCCESS" time:[NSDate date]];
+        
          refreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshEvent) userInfo:nil repeats:YES];
     }
 }
