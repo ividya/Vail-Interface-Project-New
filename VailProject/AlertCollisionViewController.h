@@ -13,8 +13,10 @@
         NSTimer *refreshTimer;
         AVAudioPlayer *alertPlayer;
         AVAudioPlayer *exitPlayer;
+        AVAudioPlayer *tempPlayer;
         long startDistance;
         BOOL isRecorded;
+        BOOL isSafe;
 }
 
 @property (nonatomic,retain) IBOutlet UIView* rightScreenView;

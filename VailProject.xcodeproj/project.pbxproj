@@ -22,7 +22,6 @@
 		2F2AE060138DD36C00DF6828 /* DestinationSuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE05B138DD36C00DF6828 /* DestinationSuggestionViewController.xib */; };
 		2F2AE061138DD36C00DF6828 /* AlertCollisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AE05D138DD36C00DF6828 /* AlertCollisionViewController.m */; };
 		2F2AE062138DD36C00DF6828 /* AlertCollisionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE05E138DD36C00DF6828 /* AlertCollisionViewController.xib */; };
-		2F2AE067138DD37E00DF6828 /* dq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE064138DD37E00DF6828 /* dq.mp3 */; };
 		2F2AE068138DD37E00DF6828 /* cpselected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE065138DD37E00DF6828 /* cpselected.mp3 */; };
 		2F2AE069138DD37E00DF6828 /* cfselected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE066138DD37E00DF6828 /* cfselected.mp3 */; };
 		2F2AE06C138DD39A00DF6828 /* toleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2AE06A138DD39A00DF6828 /* toleft.png */; };
@@ -55,7 +54,6 @@
 		2F2F79C8136EA67600FBF949 /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F79C2136EA67600FBF949 /* HTTPServer.m */; };
 		2F2F79C9136EA67600FBF949 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F79C4136EA67600FBF949 /* WebSocket.m */; };
 		2F2F79CC136EA69800FBF949 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F79CB136EA69800FBF949 /* GCDAsyncSocket.m */; };
-		2F3CC2301373E16C00DFED59 /* pathq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F3CC22F1373E16C00DFED59 /* pathq.mp3 */; };
 		2F4C5226136E85F000561E0E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4C5225136E85F000561E0E /* CoreData.framework */; };
 		2F4C5229136E877300561E0E /* VailProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C5227136E877300561E0E /* VailProject.xcdatamodeld */; };
 		2F4C522F136E924B00561E0E /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C522D136E924B00561E0E /* IntroViewController.m */; };
@@ -71,6 +69,14 @@
 		2F658B461372D3DC000EE5C1 /* EmailToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F658B3A1372D3DC000EE5C1 /* EmailToolView.xib */; };
 		2F658B481372D3DC000EE5C1 /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F658B3E1372D3DC000EE5C1 /* EmailViewController.m */; };
 		2F658B491372D3DC000EE5C1 /* EmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F658B3F1372D3DC000EE5C1 /* EmailViewController.xib */; };
+		2F6E6F72138F7D6D001CD02E /* dq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F71138F7D6D001CD02E /* dq.mp3 */; };
+		2F6E6F74138F7F47001CD02E /* pathq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F73138F7F47001CD02E /* pathq.mp3 */; };
+		2F6E6F78138F7FD7001CD02E /* ecollision.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F75138F7FD6001CD02E /* ecollision.mp3 */; };
+		2F6E6F79138F7FD7001CD02E /* lcollision.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F76138F7FD7001CD02E /* lcollision.mp3 */; };
+		2F6E6F7A138F7FD7001CD02E /* rcollision.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F77138F7FD7001CD02E /* rcollision.mp3 */; };
+		2F6E6F7E138F8AAD001CD02E /* mleft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F7B138F8AAC001CD02E /* mleft.mp3 */; };
+		2F6E6F7F138F8AAD001CD02E /* mright.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F7C138F8AAC001CD02E /* mright.mp3 */; };
+		2F6E6F80138F8AAD001CD02E /* stay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F6E6F7D138F8AAD001CD02E /* stay.mp3 */; };
 		2F8A98161383FAC000BDF544 /* aselected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A98141383FAC000BDF544 /* aselected.mp3 */; };
 		2F8A98171383FAC000BDF544 /* bselected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A98151383FAC000BDF544 /* bselected.mp3 */; };
 		2FA6B5E61382446000EC3145 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6B5D11382446000EC3145 /* ASIAuthenticationDialog.m */; };
@@ -205,7 +211,6 @@
 		2F2AE05C138DD36C00DF6828 /* AlertCollisionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertCollisionViewController.h; sourceTree = "<group>"; };
 		2F2AE05D138DD36C00DF6828 /* AlertCollisionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCollisionViewController.m; sourceTree = "<group>"; };
 		2F2AE05E138DD36C00DF6828 /* AlertCollisionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertCollisionViewController.xib; sourceTree = "<group>"; };
-		2F2AE064138DD37E00DF6828 /* dq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dq.mp3; sourceTree = "<group>"; };
 		2F2AE065138DD37E00DF6828 /* cpselected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cpselected.mp3; sourceTree = "<group>"; };
 		2F2AE066138DD37E00DF6828 /* cfselected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cfselected.mp3; sourceTree = "<group>"; };
 		2F2AE06A138DD39A00DF6828 /* toleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toleft.png; sourceTree = "<group>"; };
@@ -263,7 +268,6 @@
 		2F2F79C4136EA67600FBF949 /* WebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSocket.m; path = CocoaHTTPServer/WebSocket.m; sourceTree = "<group>"; };
 		2F2F79CA136EA69800FBF949 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = CocoaHTTPServer/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		2F2F79CB136EA69800FBF949 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = CocoaHTTPServer/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		2F3CC22F1373E16C00DFED59 /* pathq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pathq.mp3; sourceTree = "<group>"; };
 		2F4C5225136E85F000561E0E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2F4C5228136E877300561E0E /* VailProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VailProject.xcdatamodel; sourceTree = "<group>"; };
 		2F4C522C136E924B00561E0E /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
@@ -285,6 +289,14 @@
 		2F658B3D1372D3DC000EE5C1 /* EmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailViewController.h; sourceTree = "<group>"; };
 		2F658B3E1372D3DC000EE5C1 /* EmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailViewController.m; sourceTree = "<group>"; };
 		2F658B3F1372D3DC000EE5C1 /* EmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmailViewController.xib; sourceTree = "<group>"; };
+		2F6E6F71138F7D6D001CD02E /* dq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dq.mp3; sourceTree = "<group>"; };
+		2F6E6F73138F7F47001CD02E /* pathq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pathq.mp3; sourceTree = "<group>"; };
+		2F6E6F75138F7FD6001CD02E /* ecollision.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ecollision.mp3; sourceTree = "<group>"; };
+		2F6E6F76138F7FD7001CD02E /* lcollision.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lcollision.mp3; sourceTree = "<group>"; };
+		2F6E6F77138F7FD7001CD02E /* rcollision.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rcollision.mp3; sourceTree = "<group>"; };
+		2F6E6F7B138F8AAC001CD02E /* mleft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mleft.mp3; sourceTree = "<group>"; };
+		2F6E6F7C138F8AAC001CD02E /* mright.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mright.mp3; sourceTree = "<group>"; };
+		2F6E6F7D138F8AAD001CD02E /* stay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stay.mp3; sourceTree = "<group>"; };
 		2F8A98141383FAC000BDF544 /* aselected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aselected.mp3; sourceTree = "<group>"; };
 		2F8A98151383FAC000BDF544 /* bselected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bselected.mp3; sourceTree = "<group>"; };
 		2FA6B5D01382446000EC3145 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -513,8 +525,14 @@
 		2F53597A137136200006D89A /* voices */ = {
 			isa = PBXGroup;
 			children = (
+				2F6E6F7B138F8AAC001CD02E /* mleft.mp3 */,
+				2F6E6F7C138F8AAC001CD02E /* mright.mp3 */,
+				2F6E6F7D138F8AAD001CD02E /* stay.mp3 */,
+				2F6E6F75138F7FD6001CD02E /* ecollision.mp3 */,
+				2F6E6F76138F7FD7001CD02E /* lcollision.mp3 */,
+				2F6E6F77138F7FD7001CD02E /* rcollision.mp3 */,
+				2F6E6F71138F7D6D001CD02E /* dq.mp3 */,
 				9E05BF1A138E4A88001EE84A /* emailcontent.mp3 */,
-				2F2AE064138DD37E00DF6828 /* dq.mp3 */,
 				2F2AE065138DD37E00DF6828 /* cpselected.mp3 */,
 				2F2AE066138DD37E00DF6828 /* cfselected.mp3 */,
 				9E30CEBF138CDE4900791E87 /* replymessagesent.mp3 */,
@@ -578,13 +596,13 @@
 				2F8A98141383FAC000BDF544 /* aselected.mp3 */,
 				2F8A98151383FAC000BDF544 /* bselected.mp3 */,
 				9E6AFF2A137420BA00EF43B9 /* newemail.mp3 */,
+				2F6E6F73138F7F47001CD02E /* pathq.mp3 */,
 				9E26E3F1137404F200B3CBEB /* b1.mp3 */,
 				9EEFADF3138DEDEF0071EB15 /* b0.mp3 */,
 				9E953E54138A5BC80010B378 /* b2.mp3 */,
 				9E26E3F3137404F200B3CBEB /* h0.mp3 */,
 				9E26E3F4137404F200B3CBEB /* h1.mp3 */,
 				9E26E3F5137404F200B3CBEB /* h2.mp3 */,
-				2F3CC22F1373E16C00DFED59 /* pathq.mp3 */,
 				2F28B39D1372962800A33254 /* turnright.mp3 */,
 				2F28B39E1372962800A33254 /* turnleft.mp3 */,
 				2F1DDAA91371A7BA004F9AFB /* wrongway.mp3 */,
@@ -897,7 +915,6 @@
 				2F658B451372D3DC000EE5C1 /* EmailSingleTextView.xib in Resources */,
 				2F658B461372D3DC000EE5C1 /* EmailToolView.xib in Resources */,
 				2F658B491372D3DC000EE5C1 /* EmailViewController.xib in Resources */,
-				2F3CC2301373E16C00DFED59 /* pathq.mp3 in Resources */,
 				9E89373A1373D1F800BC14E9 /* AdminEmailViewController.xib in Resources */,
 				9E26E3F7137404F200B3CBEB /* b1.mp3 in Resources */,
 				9E26E3F9137404F200B3CBEB /* h0.mp3 in Resources */,
@@ -979,7 +996,6 @@
 				9E30CEC3138CEC0900791E87 /* htest1.mp3 in Resources */,
 				2F2AE060138DD36C00DF6828 /* DestinationSuggestionViewController.xib in Resources */,
 				2F2AE062138DD36C00DF6828 /* AlertCollisionViewController.xib in Resources */,
-				2F2AE067138DD37E00DF6828 /* dq.mp3 in Resources */,
 				2F2AE068138DD37E00DF6828 /* cpselected.mp3 in Resources */,
 				2F2AE069138DD37E00DF6828 /* cfselected.mp3 in Resources */,
 				2F2AE06C138DD39A00DF6828 /* toleft.png in Resources */,
@@ -989,6 +1005,14 @@
 				2F2AE07C138DD42000DF6828 /* AdminNavigationViewController.xib in Resources */,
 				9EEFADF4138DEDEF0071EB15 /* b0.mp3 in Resources */,
 				9E05BF1B138E4A88001EE84A /* emailcontent.mp3 in Resources */,
+				2F6E6F72138F7D6D001CD02E /* dq.mp3 in Resources */,
+				2F6E6F74138F7F47001CD02E /* pathq.mp3 in Resources */,
+				2F6E6F78138F7FD7001CD02E /* ecollision.mp3 in Resources */,
+				2F6E6F79138F7FD7001CD02E /* lcollision.mp3 in Resources */,
+				2F6E6F7A138F7FD7001CD02E /* rcollision.mp3 in Resources */,
+				2F6E6F7E138F8AAD001CD02E /* mleft.mp3 in Resources */,
+				2F6E6F7F138F8AAD001CD02E /* mright.mp3 in Resources */,
+				2F6E6F80138F8AAD001CD02E /* stay.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

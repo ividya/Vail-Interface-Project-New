@@ -84,7 +84,11 @@
     }
     
     //run timer for exit
+    if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
+
     refreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshEvent) userInfo:nil repeats:YES];
+        
+    }
 
 }
 
@@ -93,23 +97,55 @@
     int lane = [[InterfaceVariableManager sharedManager] lane];
 
     if( (_isRight && lane == 3) || (!_isRight && lane == 1)){
+        
+        if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
+
         _rLabel.text = @"Stay in this lane!";
         _lLabel.text = @"Stay in this lane!";
         
+        }else{
+            if(!isSafe){
+                NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"stay" ofType:@"mp3"];
+                tempPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+                [tempPlayer play];
+            }
+
+        }
+            
         if(!isRecorded){
             [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event: [NSString stringWithFormat:@"COLLISION_MOVED_%f",startDistance] result:[NSString stringWithFormat:@"%d,%d",_currentLane,lane] time:[NSDate date]];
             isRecorded = YES;
         }
-
+        
+        isSafe =YES;
         
     }else{
-        if(_isRight){
-            _rLabel.text = @"Move to the Right-most lane and stay there!";
+        
+        
+        if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
+
+            if(_isRight){
+                _rLabel.text = @"Move to the Right-most lane!";
+            }else{
+                _lLabel.text = @"Move to the Left-most lane!";
+            }
         }else{
-            _lLabel.text = @"Move to the Left-most lane and stay there!";
+            
+            if(isSafe){
+                if(_isRight){
+                    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"mright" ofType:@"mp3"];
+                    tempPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+                    [tempPlayer play];
+                }else{
+                    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"mleft" ofType:@"mp3"];
+                    tempPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+                    [tempPlayer play];
+                }
+            }
         }
+        
+        isSafe =NO;
     }
-    
     
     if( [[InterfaceVariableManager sharedManager] distance] - startDistance >= STAYING_DISTANCE ){
     
@@ -141,6 +177,7 @@
     
     if (player == alertPlayer){
         [[InterfaceVariableManager sharedManager] saveEvent:NAVIGATION_MODE event: [NSString stringWithFormat:@"COLLISION_ASKED_%f",startDistance] result:@"SUCCESS" time:[NSDate date]];
+         refreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshEvent) userInfo:nil repeats:YES];
     }
 }
 

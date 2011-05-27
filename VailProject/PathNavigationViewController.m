@@ -76,7 +76,13 @@
     }
     
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:0]];
+    
+    if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
         [prospectedEvent setObject:@"D" forKey:[NSNumber numberWithDouble:500]];
+    }else{
+        [prospectedEvent setObject:@"D" forKey:[NSNumber numberWithDouble:200]];
+    }
+    
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:1000]];
         [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:2300]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:3500]];
@@ -87,9 +93,13 @@
         [prospectedEvent setObject:@"CL" forKey:[NSNumber numberWithDouble:8200]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:9000]];
         [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:9500]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:10000]];
-        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:10800]];
-        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:11200]];
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:10500]];
+    if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
+        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:11300]];
+    }else{
+        [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:11000]];
+    }
+        [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:11500]];
         [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:12300]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:13300]];
         [prospectedEvent setObject:@"R" forKey:[NSNumber numberWithDouble:13800]];
