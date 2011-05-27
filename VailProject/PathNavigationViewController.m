@@ -90,9 +90,9 @@
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:5300]];
         [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:6000]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:7000]];
-        [prospectedEvent setObject:@"CL" forKey:[NSNumber numberWithDouble:8200]];
+        [prospectedEvent setObject:@"CL" forKey:[NSNumber numberWithDouble:8000]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:9000]];
-        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:9500]];
+        [prospectedEvent setObject:@"L" forKey:[NSNumber numberWithDouble:9300]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:10500]];
     if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY){
         [prospectedEvent setObject:@"I" forKey:[NSNumber numberWithDouble:11300]];
