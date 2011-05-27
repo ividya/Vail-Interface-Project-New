@@ -70,6 +70,7 @@
         
         NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"dq" ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        _player.delegate = self;
         [_player release];
         [_player play];
         
