@@ -35,7 +35,8 @@
         receivedEmail = NO;
         stage1complete = NO;
         stage2complete = NO;
-                
+        readHeaders = YES;
+        
         if (![EmailManager instance].tutorialMode)
             [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"experimentBegin" result:@"" time:[NSDate date]];
     }    
@@ -45,6 +46,7 @@
 - (void)addNewEmails:(id) param
 {
     receivedEmail = YES;
+    
     [self.tableView reloadData];
     [blackView removeFromSuperview];
     
@@ -54,7 +56,7 @@
     // Do notification
     if([varMan displayMode] == SCREEN_DISPLAY) {
         [ViewEffects blink:[UIApplication sharedApplication].keyWindow];
-        [ViewEffects popupAlertViewWithMsg:@"New Email!!!" targetViewController:self forDuration:5];
+        [ViewEffects popupAlertViewWithMsg:@"New Email!!!" targetViewController:self forDuration:3];
     }
     else if([varMan displayMode] == VOICE_DISPLAY) {
         // Play new email sound
@@ -66,25 +68,15 @@
         [NSThread sleepForTimeInterval:[self.player duration]+1];
 
     }
-    
 
-    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY)
-    {
-        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"selectoneofthefollowing" ofType:@"mp3"];
-        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-        [self.player stop];
-        [self.player play];
-        [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-    }
-
-    
+    readHeaders = YES;
     [self repeatEmail:nil];
     
 
     if (![EmailManager instance].tutorialMode)
     {
         if([varMan displayMode] == SCREEN_DISPLAY) {
-            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"AddedNewEmail" time:[[NSDate date] dateByAddingTimeInterval:5]];
+            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"AddedNewEmail" time:[[NSDate date] dateByAddingTimeInterval:3]];
         }
         else
         {
@@ -178,9 +170,6 @@
         [ViewEffects hideView:self.startView delay:7];
     }
         
-    // Hide both buttons until email is received
-    self.firstEmailButton.hidden = YES;
-    self.secondEmailButton.hidden = YES;
     
     if ([EmailManager instance].tutorialMode){
         NSMutableString *helpMsg = [NSMutableString stringWithString:@"Your goal is to delete spam mails and respond to other emails.\n\n Email containing event information must be added to calendar as well.\n\n"];
@@ -189,12 +178,12 @@
         if([varMan feedbackMode] == VOICE_FEEDBACK) {
             [helpMsg appendString:@"At any time say \"Repeat\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
         }
-        [ViewEffects popupAlertViewWithMsg:helpMsg targetViewController:self forDuration:12];
+        [ViewEffects popupAlertViewWithMsg:helpMsg targetViewController:self forDuration:7];
         
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:16];
+        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:8];
     }
     else
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:45];
+        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:1];
 }
 
 - (void)viewDidUnload
@@ -219,19 +208,19 @@
 {
     [super viewWillAppear:animated];
     
-    if (receivedEmail)
-    {
-        if ([[EmailManager instance].emailModelArray count] == 1){
-            firstEmailButton.hidden = YES;
-            secondEmailButton.hidden = NO; 
-            repeatButton.hidden = NO;
-        }
-        else if ([[EmailManager instance].emailModelArray count] == 2){
-            firstEmailButton.hidden = NO;
-            secondEmailButton.hidden = NO;        
-            repeatButton.hidden = NO;
-        }
-    }
+//    if (receivedEmail)
+//    {
+//        if ([[EmailManager instance].emailModelArray count] == 1){
+//            firstEmailButton.hidden = YES;
+//            secondEmailButton.hidden = NO; 
+//            repeatButton.hidden = NO;
+//        }
+//        else if ([[EmailManager instance].emailModelArray count] == 2){
+//            firstEmailButton.hidden = NO;
+//            secondEmailButton.hidden = NO;        
+//            repeatButton.hidden = NO;
+//        }
+//    }
     
 }
 
@@ -264,6 +253,9 @@
         
         [[EmailManager instance] addMoreEmails];
         
+        self.firstEmailButton.hidden = YES;
+        self.secondEmailButton.hidden = YES;        
+        
         [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:45];
         return;
 
@@ -284,52 +276,10 @@
     // For display feedback
     if (receivedEmail)
     {   
-        if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY)
-        {
-            
-            NSString *soundPath;/* = [[NSBundle mainBundle] pathForResource:@"emaillist" ofType:@"mp3"];
-            self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-            [self.player stop];
-            [self.player play];
-            [NSThread sleepForTimeInterval:[self.player duration]+0.5];*/
-
-            if([[EmailManager instance].emailModelArray count] == 2){
-                soundPath = [[NSBundle mainBundle] pathForResource:@"selectoneofthefollowing" ofType:@"mp3"];
-                self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-                [self.player stop];
-                [self.player play];
-                [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-
-                soundPath = [[NSBundle mainBundle] pathForResource:@"firstemail" ofType:@"mp3"];
-                self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-                [self.player stop];
-                [self.player play];
-                [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-                
-                soundPath = [[NSBundle mainBundle] pathForResource:@"secondemail" ofType:@"mp3"];
-                self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-                [self.player stop];
-                [self.player play];
-                [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-            }
-
-            if([[EmailManager instance].emailModelArray count] == 1){
-                soundPath = [[NSBundle mainBundle] pathForResource:@"selectoneofthefollowing" ofType:@"mp3"];
-                self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-                [self.player stop];
-                [self.player play];
-                [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-                                
-                soundPath = [[NSBundle mainBundle] pathForResource:@"secondemail" ofType:@"mp3"];
-                self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-                [self.player stop];
-                [self.player play];
-                [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-            }
-
-            if (![EmailManager instance].tutorialMode)
-                [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"show" time:[NSDate date]];
-        }
+        [self repeatEmail:nil];
+        
+        if (![EmailManager instance].tutorialMode)
+            [[InterfaceVariableManager sharedManager] saveEvent:EMAIL_MODE event:@"emaillist" result:@"show" time:[NSDate date]];
         
     }
     return;
@@ -337,6 +287,13 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    self.firstEmailButton.hidden = YES;
+    self.secondEmailButton.hidden = YES;
+    self.repeatButton.hidden = YES;
 }
 
 
@@ -352,42 +309,68 @@
 {    
     [self.player stop];
 
-    for (int i = 0; i < [[EmailManager instance].emailModelArray count]; i++)
-    {        
-        EmailModel *email = [[EmailManager instance].emailModelArray objectAtIndex:i];
-        NSString *soundPath;
+    
+    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY)
+    {
         
-        if ([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY)
-        {
-            switch (email.emailIndex)
-            {
-                case 0:
-                    soundPath = [[NSBundle mainBundle] pathForResource:@"firstemail" ofType:@"mp3"];
-                    self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-                    [self.player play];
-                    [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-                    break;
-                case 1:
-                    soundPath = [[NSBundle mainBundle] pathForResource:@"secondemail" ofType:@"mp3"];
-                    self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-                    [self.player play];
-                    [NSThread sleepForTimeInterval:[self.player duration]+0.5];
-                    self.secondEmailButton.enabled = YES;
-                    break;
-                default:
-                    break;
-            }
+        NSString *soundPath;/* = [[NSBundle mainBundle] pathForResource:@"emaillist" ofType:@"mp3"];
+                             self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+                             [self.player stop];
+                             [self.player play];
+                             [NSThread sleepForTimeInterval:[self.player duration]+0.5];*/
+        
+        
+        soundPath = [[NSBundle mainBundle] pathForResource:@"selectoneofthefollowing" ofType:@"mp3"];
+        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+        [self.player stop];
+        [self.player play];
+        [NSThread sleepForTimeInterval:[self.player duration]+0.5];
+        
+        
+        // Read Email Content
+        for (int i = 0; i < [[EmailManager instance].emailModelArray count]; i++)
+        {        
+            EmailModel *email = [[EmailManager instance].emailModelArray objectAtIndex:i];
+            NSString *soundPath;
             
-            soundPath = [[NSBundle mainBundle] pathForResource:email.headingSoundFile ofType:@"mp3"];
-            self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
-            [self.player play];                        
-            [NSThread sleepForTimeInterval:[self.player duration] + 0.5];
-        }   
-        email.newmail = NO;
+            if ([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY)
+            {
+                switch (email.emailIndex)
+                {
+                    case 0:
+                        soundPath = [[NSBundle mainBundle] pathForResource:@"firstemail" ofType:@"mp3"];
+                        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+                        [self.player play];
+                        [NSThread sleepForTimeInterval:[self.player duration]+0.5];
+                        self.firstEmailButton.hidden = NO;
+                        break;
+                    case 1:
+                        soundPath = [[NSBundle mainBundle] pathForResource:@"secondemail" ofType:@"mp3"];
+                        self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+                        [self.player play];
+                        [NSThread sleepForTimeInterval:[self.player duration]+0.5];
+                        self.secondEmailButton.hidden = NO;
+                        break;
+                    default:
+                        break;
+                }
+                
+                if (readHeaders)
+                {
+                    soundPath = [[NSBundle mainBundle] pathForResource:email.headingSoundFile ofType:@"mp3"];
+                    self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
+                    [self.player play];                        
+                    [NSThread sleepForTimeInterval:[self.player duration] + 0.5];
+                }
+            }   
+        }
     }
     
+    readHeaders = NO;
+    self.repeatButton.hidden = NO;
+    
     // Show both buttons
-    [self viewWillAppear:NO];
+//    [self viewWillAppear:NO];
 }
 
 - (void)firstEmail:(id) param
@@ -593,7 +576,8 @@
     [self secondEmail:nil];
 }
 
-- (IBAction)repeatEmailList:(id)sender {
+- (IBAction)repeatAction:(id)sender {
+    readHeaders = YES;
     [self repeatEmail:nil];
 }
 @end

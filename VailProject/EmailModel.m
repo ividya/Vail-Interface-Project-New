@@ -19,6 +19,7 @@
 @synthesize newmail;
 @synthesize mustDelete;
 @synthesize emailIndex;
+@synthesize readContent;
 
 - (void)dealloc {
     self.sender = nil;

@@ -19,6 +19,7 @@
     UIButton *firstEmailButton;
     UIButton *secondEmailButton;
     UIButton *repeatButton;
+    BOOL readHeaders;
     BOOL transistionAnimation;
     BOOL receivedEmail;
     BOOL stage1complete;
@@ -55,6 +56,6 @@
 @property (nonatomic, retain) UIView *finishView;
 - (IBAction)firstEmailAction:(id)sender;
 - (IBAction)secondEmailAction:(id)sender;
-- (IBAction)repeatEmailList:(id)sender;
+- (IBAction)repeatAction:(id)sender;
 
 @end

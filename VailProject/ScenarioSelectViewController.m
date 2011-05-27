@@ -85,10 +85,10 @@
     
     EmailModel *emailModel;
     emailModel = [[[EmailModel alloc] init] autorelease];    
-    emailModel.sender = @"SPAM";
-    emailModel.subject = @"Survey for COMM168";
+    emailModel.sender = @"John";
+    emailModel.subject = @"Sanfrancisco News";
     emailModel.date = @"5:30 AM";
-    emailModel.body = @"How do you like the experiment? Support our project by inviting your friends.";
+    emailModel.body = @"Textbooks are only 99cents. Come visit us.";
     emailModel.headingSoundFile = @"h0";
     emailModel.contentSoundFile = @"b0";
     emailModel.newmail = YES;
@@ -98,9 +98,9 @@
 
     emailModel = [[[EmailModel alloc] init] autorelease];
     emailModel.sender = @"Bob";
-    emailModel.subject = @"Important Meeting";
+    emailModel.subject = @"Plans for today";
     emailModel.date = @"4:30 AM";
-    emailModel.body = @"We have a meeting with Charlie at noon.  Let me know if you can make it.";
+    emailModel.body = @"We have a meeting with Charlie at noon.  Can you join us?";
     emailModel.eventHour = @"12";
     emailModel.eventMin = @"00";
     emailModel.eventTitle = @"Meeting with Charlie";
@@ -141,7 +141,7 @@
     emailModel.sender = @"Tutorial";
     emailModel.subject = @"Event information";
     emailModel.date = @"1:00 PM";
-    emailModel.body = @"This is a regular mail. Send a reply message and then add to calendar.";
+    emailModel.body = @"This is a event mail. Send a reply message and then add to calendar.";
     emailModel.eventHour = @"1";
     emailModel.eventMin = @"00";
     emailModel.eventTitle = @"Some Event";
@@ -154,7 +154,7 @@
     [emailModelArray insertObject:emailModel atIndex:0];
     
     emailModel = [[[EmailModel alloc] init] autorelease];
-    emailModel.sender = @"SPAM";
+    emailModel.sender = @"Sam";
     emailModel.subject = @"Test Email";
     emailModel.date = @"1:15 PM";
     emailModel.body = @"This is a spam mail. Delete this email.";

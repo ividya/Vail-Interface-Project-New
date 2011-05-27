@@ -82,8 +82,16 @@
         
         [NSThread sleepForTimeInterval:[self.player duration]+0.5];
     }
-
+    
+    InterfaceVariableManager *varMan = [InterfaceVariableManager sharedManager];
+    
+    
+    if([varMan displayMode] == VOICE_DISPLAY && [varMan feedbackMode] == SCREEN_FEEDBACK) {
+        [self.view viewWithTag:2].hidden = NO;
+        [self.view viewWithTag:3].hidden = NO;        
+    }
 }
+
 - (void)firstEmail:(id) param
 {
 }
@@ -217,30 +225,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    InterfaceVariableManager *varMan = [InterfaceVariableManager sharedManager];
-
-    if([varMan displayMode] == SCREEN_DISPLAY) {
-        [self.view viewWithTag:3].hidden = YES;
-        [self.yesButton setTitle:@"Yes, I will be there." forState:UIControlStateNormal];
-        [self.noButton setTitle:@"No, I cannot make it." forState:UIControlStateNormal];
-    }
-    
-    if([varMan displayMode] == VOICE_DISPLAY) {
-        [self.view setBackgroundColor:[UIColor blackColor]];
-        [self.view viewWithTag:1].hidden = YES;
-    }
-    
-    if([varMan feedbackMode] == VOICE_FEEDBACK) {
-        [self.view viewWithTag:2].userInteractionEnabled = NO;
-    }
-    
-    if([varMan displayMode] == VOICE_DISPLAY && [varMan feedbackMode] == VOICE_FEEDBACK) {
-        
-        [self.view viewWithTag:2].hidden = YES;
-        [self.view viewWithTag:3].hidden = YES;
-    }
-    
+    [self.view setBackgroundColor:[UIColor blackColor]];
     self.navigationItem.hidesBackButton = YES;    
 }
 
@@ -251,13 +236,18 @@
     // Register for remote listener
     [[InterfaceVariableManager sharedManager] registerController:EMAIL_ADMIN controller:self];
     
-//    InterfaceVariableManager *varMan = [InterfaceVariableManager sharedManager];
-//    
-//    if([varMan displayMode] == SCREEN_DISPLAY) {
-//        [self.view viewWithTag:3].hidden = YES;
-//        [self.yesButton setTitle:@"Yes, I will be there." forState:UIControlStateNormal];
-//        [self.noButton setTitle:@"No, I cannot make it." forState:UIControlStateNormal];
-//    }
+    InterfaceVariableManager *varMan = [InterfaceVariableManager sharedManager];
+    
+    if([varMan displayMode] == SCREEN_DISPLAY) {
+        [self.view viewWithTag:1].hidden = NO;
+        [self.view viewWithTag:2].hidden = NO;
+        [self.yesButton setTitle:@"Yes, I will be there." forState:UIControlStateNormal];
+        [self.noButton setTitle:@"No, I cannot make it." forState:UIControlStateNormal];
+    }
+    if([varMan feedbackMode] == VOICE_FEEDBACK) {
+        self.yesButton.enabled = NO;
+        self.noButton.enabled = NO;
+    }
 
 }
 

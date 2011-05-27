@@ -45,7 +45,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUILabel" id="667810838">
 						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{125, 131}, {518, 63}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
@@ -72,7 +72,7 @@
 					</object>
 					<object class="IBUIView" id="738347002">
 						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUIButton" id="616630775">
@@ -129,8 +129,8 @@
 							</object>
 							<object class="IBUIButton" id="614859013">
 								<reference key="NSNextResponder" ref="738347002"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 527}, {153, 150}}</string>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{20, 525}, {276, 150}}</string>
 								<reference key="NSSuperview" ref="738347002"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
@@ -139,22 +139,15 @@
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<object class="NSFont" key="IBUIFont">
-									<string key="NSName">Helvetica-Bold</string>
-									<double key="NSSize">15</double>
-									<int key="NSfFlags">16</int>
-								</object>
+								<reference key="IBUIFont" ref="224435771"/>
 								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">Listen Again</string>
 								<reference key="IBUIHighlightedTitleColor" ref="790764970"/>
 								<object class="NSColor" key="IBUINormalTitleColor">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 								</object>
 								<reference key="IBUINormalTitleShadowColor" ref="136477086"/>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">speaker.png</string>
-								</object>
 							</object>
 						</object>
 						<string key="NSFrame">{{0, 202}, {768, 714}}</string>
@@ -433,10 +426,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">speaker.png</string>
-			<string key="NS.object.0">{500, 500}</string>
-		</object>
 		<string key="IBCocoaTouchPluginVersion">301</string>
 	</data>
 </archive>

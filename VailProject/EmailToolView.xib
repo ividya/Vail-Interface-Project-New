@@ -50,7 +50,7 @@
 							<object class="IBUIButton" id="216897969">
 								<reference key="NSNextResponder" ref="6547926"/>
 								<int key="NSvFlags">294</int>
-								<string key="NSFrame">{{20, 43}, {230, 100}}</string>
+								<string key="NSFrame">{{20, 26}, {230, 100}}</string>
 								<reference key="NSSuperview" ref="6547926"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="38871631"/>
@@ -82,7 +82,7 @@
 							<object class="IBUIButton" id="38871631">
 								<reference key="NSNextResponder" ref="6547926"/>
 								<int key="NSvFlags">295</int>
-								<string key="NSFrame">{{269, 43}, {230, 100}}</string>
+								<string key="NSFrame">{{269, 26}, {230, 100}}</string>
 								<reference key="NSSuperview" ref="6547926"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="241976543"/>
@@ -104,7 +104,7 @@
 							<object class="IBUIButton" id="241976543">
 								<reference key="NSNextResponder" ref="6547926"/>
 								<int key="NSvFlags">291</int>
-								<string key="NSFrame">{{518, 43}, {230, 100}}</string>
+								<string key="NSFrame">{{518, 26}, {230, 100}}</string>
 								<reference key="NSSuperview" ref="6547926"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="646147691"/>
@@ -148,9 +148,10 @@
 							<object class="IBUIButton" id="59026209">
 								<reference key="NSNextResponder" ref="6547926"/>
 								<int key="NSvFlags">-2147483357</int>
-								<string key="NSFrame">{{20, 259}, {118, 117}}</string>
+								<string key="NSFrame">{{20, 273}, {230, 117}}</string>
 								<reference key="NSSuperview" ref="6547926"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
@@ -158,16 +159,13 @@
 								<reference key="IBUIFont" ref="762770077"/>
 								<int key="IBUIButtonType">1</int>
 								<int key="IBUILineBreakMode">0</int>
+								<string key="IBUINormalTitle">Listen Again</string>
 								<reference key="IBUIHighlightedTitleColor" ref="569499226"/>
 								<object class="NSColor" key="IBUINormalTitleColor">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 								</object>
 								<reference key="IBUINormalTitleShadowColor" ref="709630412"/>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">speaker.png</string>
-								</object>
 							</object>
 						</object>
 						<string key="NSFrameSize">{768, 405}</string>
@@ -262,21 +260,21 @@
 					<int key="connectionID">21</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">repeatEmailAction:</string>
-						<reference key="source" ref="59026209"/>
-						<reference key="destination" ref="841351856"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">26</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">repeatButton</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="59026209"/>
 					</object>
 					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">repeatAction:</string>
+						<reference key="source" ref="59026209"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">28</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -304,10 +302,10 @@
 						<reference key="object" ref="341955538"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="216897969"/>
-							<reference ref="241976543"/>
-							<reference ref="38871631"/>
 							<reference ref="646147691"/>
+							<reference ref="216897969"/>
+							<reference ref="38871631"/>
+							<reference ref="241976543"/>
 							<reference ref="59026209"/>
 						</object>
 						<reference key="parent" ref="0"/>
@@ -378,7 +376,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">27</int>
+			<int key="maxID">28</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -393,7 +391,7 @@
 							<string>addCalendarAction:</string>
 							<string>closeEmailAction:</string>
 							<string>deleteEmailAction:</string>
-							<string>repeatEmailAction:</string>
+							<string>repeatAction:</string>
 							<string>replyEmailAction:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -412,7 +410,7 @@
 							<string>addCalendarAction:</string>
 							<string>closeEmailAction:</string>
 							<string>deleteEmailAction:</string>
-							<string>repeatEmailAction:</string>
+							<string>repeatAction:</string>
 							<string>replyEmailAction:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -430,7 +428,7 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">repeatEmailAction:</string>
+								<string key="name">repeatAction:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -514,10 +512,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">speaker.png</string>
-			<string key="NS.object.0">{500, 500}</string>
-		</object>
 		<string key="IBCocoaTouchPluginVersion">301</string>
 	</data>
 </archive>

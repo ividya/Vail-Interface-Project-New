@@ -373,7 +373,9 @@
     [self closeEmail: nil];
 }
          
-- (IBAction)repeatEmailAction:(id)sender {
+- (IBAction)repeatAction:(id)sender {
+    email.readContent = NO;
+    
     [self repeatEmail: nil];
 }
 
@@ -459,6 +461,9 @@
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration] +0.5];
         
+        // Do not read content if one has heard it already
+        if(email.readContent) return;
+        
         soundPath = [[NSBundle mainBundle] pathForResource:email.headingSoundFile ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
         [self.player play];                        
@@ -476,6 +481,7 @@
         [NSThread sleepForTimeInterval:[self.player duration] +0.5];
     }
     
+    email.readContent = YES;
 }
 
 - (void)firstEmail:(id) param
