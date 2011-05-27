@@ -109,6 +109,13 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [[InterfaceVariableManager sharedManager] registerController:EMAIL_ADMIN controller:self];
+    
+    InterfaceVariableManager *varMan = [InterfaceVariableManager sharedManager];
+    
+    if([varMan displayMode] == SCREEN_DISPLAY) {
+        [self.view viewWithTag:1].hidden = NO;
+        [self.view viewWithTag:2].hidden = NO;
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -160,6 +167,13 @@
         [self.player stop];
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration]+0.5];
+    }
+    
+    InterfaceVariableManager *varMan = [InterfaceVariableManager sharedManager];
+    
+    if([varMan displayMode] == VOICE_DISPLAY && [varMan feedbackMode] == SCREEN_FEEDBACK) {
+        [self.view viewWithTag:2].hidden = NO;
+        [self.view viewWithTag:3].hidden = NO;
     }
     
     if (![EmailManager instance].tutorialMode)

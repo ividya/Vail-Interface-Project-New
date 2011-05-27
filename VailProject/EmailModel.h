@@ -18,4 +18,5 @@
 @property bool undeletable;
 @property bool newmail;
 @property bool mustDelete;
+@property bool readContent;
 @end

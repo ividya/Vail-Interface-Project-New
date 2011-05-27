@@ -68,7 +68,7 @@
 }
 
 - (IBAction)repeatEmail:(id)sender {    
-    [VailUtility sendHTTP:[self urlCommandString:@"repeatEmail"]];
+    [VailUtility sendHTTP:[self urlCommandString:@"repeatAction"]];
 }
 
 - (IBAction)firstEmail:(id)sender {    

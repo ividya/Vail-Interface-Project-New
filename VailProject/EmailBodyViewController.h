@@ -49,7 +49,7 @@
 - (IBAction)replyEmailAction:(id)sender;
 - (IBAction)deleteEmailAction:(id)sender;
 - (IBAction)closeEmailAction:(id)sender;
-- (IBAction)repeatEmailAction:(id)sender;
+- (IBAction)repeatAction:(id)sender;
 
 
 
