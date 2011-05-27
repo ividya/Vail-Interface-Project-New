@@ -182,8 +182,10 @@
         
         [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:8];
     }
-    
-    self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshEvent) userInfo:nil repeats:YES];
+    else
+    {
+        self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshEvent) userInfo:nil repeats:YES];
+    }
 }
 
 - (void)viewDidUnload
