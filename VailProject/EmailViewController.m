@@ -178,9 +178,9 @@
         if([varMan feedbackMode] == VOICE_FEEDBACK) {
             [helpMsg appendString:@"At any time say \"Listen Again\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
         }
-        [ViewEffects popupAlertViewWithMsg:helpMsg targetViewController:self forDuration:7];
+        [ViewEffects popupAlertViewWithMsg:helpMsg targetViewController:self forDuration:12];
         
-        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:8];
+        [self performSelector:@selector(addNewEmails:) withObject:nil afterDelay:13];
     }
     else
     {
@@ -245,7 +245,7 @@
             
             [ViewEffects showView:self.finishView targetView:self.tableView];
             [ViewEffects hideView:self.finishView delay:10];
-            [self performSelector:@selector(returnToMainMenu:) withObject:nil afterDelay:5];
+            [self.navigationController popViewControllerAnimated:YES];
             return;
         }
         
@@ -265,9 +265,10 @@
         
         
         [ViewEffects showView:self.finishView targetView:self.tableView];
-        [ViewEffects hideView:self.finishView delay:30];
+        [ViewEffects hideView:self.finishView delay:60];
+        [ViewEffects blink:self.finishView];
         
-        [self performSelector:@selector(returnToMainMenu:) withObject:nil afterDelay:30];
+        [self performSelector:@selector(returnToMainMenu:) withObject:nil afterDelay:60];
         return;
     }
         
