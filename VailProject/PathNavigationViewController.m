@@ -108,7 +108,7 @@
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:16200]];
         [prospectedEvent setObject:@"CR" forKey:[NSNumber numberWithDouble:17200]];
         [prospectedEvent setObject:@"S" forKey:[NSNumber numberWithDouble:18000]];
-        [prospectedEvent setObject:@"E" forKey:[NSNumber numberWithDouble:18400]];
+        [prospectedEvent setObject:@"E" forKey:[NSNumber numberWithDouble:18200]];
 
       
     
