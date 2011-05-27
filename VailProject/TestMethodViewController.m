@@ -89,13 +89,12 @@
     
     if([InterfaceVariableManager isKeyExist:_uniqueTextField.text]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
-                                                        message:@"Key Already Exist. Enter another one!"
+                                                        message:@"Key Already Exist."
                                                        delegate:self
-                                              cancelButtonTitle:@"Cancel"
+                                              cancelButtonTitle:@"Okay"
                                               otherButtonTitles:nil]; 
         [alert show];
         [alert release];
-        return;
     }
     
     

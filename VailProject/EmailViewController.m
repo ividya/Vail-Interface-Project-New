@@ -486,13 +486,13 @@
 {
     double currentDistance = [[InterfaceVariableManager sharedManager] distance];
 
-    if (currentDistance > 2700 && !receivedEmail) {
+    if (currentDistance > 2000 && !receivedEmail) {
         receivedEmail = YES;
         [self addNewEmails:nil];
     }
     
     
-    if (currentDistance > 7000 && stage1complete) {
+    if (currentDistance > 7200 && stage1complete) {
         [[EmailManager instance] addMoreEmails];
         [self addNewEmails:nil];
         [refreshTimer invalidate];
