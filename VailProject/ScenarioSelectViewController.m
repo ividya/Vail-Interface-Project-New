@@ -76,6 +76,10 @@
 
 - (IBAction)emailButtonPushed:(id)sender
 {
+    [[InterfaceVariableManager sharedManager] setDistance:0.0];
+    [[InterfaceVariableManager sharedManager] setSpeed:0.0];
+    [[InterfaceVariableManager sharedManager] setLane:2];
+
     // Create test model
     EmailManager *manager = [EmailManager instance];
     manager.tutorialMode = NO;
@@ -130,6 +134,10 @@
 
 - (IBAction)tutorialButtonPushed:(id)sender
 {
+    [[InterfaceVariableManager sharedManager] setDistance:0.0];
+    [[InterfaceVariableManager sharedManager] setSpeed:0.0];
+    [[InterfaceVariableManager sharedManager] setLane:2];
+
     // Create test model
     EmailManager *manager = [EmailManager instance];
     manager.tutorialMode = YES;

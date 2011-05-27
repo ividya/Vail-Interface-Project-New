@@ -200,7 +200,7 @@
         nController.currentLane = [[InterfaceVariableManager sharedManager] lane];
         [self.navigationController pushViewController:nController animated:YES];
         [nController release];
-    }else if([lastEvent isEqualToString:@"E"]){
+    }else if([lastEvent isEqualToString:@"E"] || currentDistance >= 18200){
         [_refreshTimer invalidate];
         [self quitNavigation];
     }else if(lastEvent == nil){
