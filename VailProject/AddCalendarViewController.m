@@ -160,7 +160,8 @@
         [NSThread sleepForTimeInterval:[self.player duration]+1];
     }
 
-    if([[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK)
+    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY &&
+            [[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK)
     {
         NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"sayaddtocalendar" ofType:@"mp3"];
         self.player =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundPath] error:nil];
