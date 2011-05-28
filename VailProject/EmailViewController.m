@@ -266,7 +266,6 @@
         
         [ViewEffects showView:self.finishView targetView:self.tableView];
         [ViewEffects hideView:self.finishView delay:60];
-        [ViewEffects blink:self.finishView];
         
         [self performSelector:@selector(returnToMainMenu:) withObject:nil afterDelay:60];
         return;
@@ -493,7 +492,7 @@
     }
     
     
-    if (currentDistance > 7200 && stage1complete) {
+    if (currentDistance > 6100 && stage1complete) {
         [[EmailManager instance] addMoreEmails];
         [self addNewEmails:nil];
         [refreshTimer invalidate];
