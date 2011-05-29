@@ -429,8 +429,9 @@
     }
     
     else if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY) {
-        
+        [ViewEffects popupAlertViewWithMsg:@"Voice Command List:\n\nAdd to calendar\n\nReply\n\nDelete\n\nClose" targetViewController:self forDuration:3.5];
     }
+
 }
 
 

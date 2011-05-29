@@ -217,7 +217,10 @@
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration] +0.5];
 
-    }    
+    }        
+    else if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY) {
+        [ViewEffects popupAlertViewWithMsg:@"Voice Command List:\n\nMessage 1\n\nMessage 2" targetViewController:self forDuration:3.5];
+    }
 }
 
 #pragma mark - View lifecycle

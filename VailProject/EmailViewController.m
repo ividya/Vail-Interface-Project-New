@@ -173,7 +173,7 @@
         
     
     if ([EmailManager instance].tutorialMode){
-        NSMutableString *helpMsg = [NSMutableString stringWithString:@"There are three tasks.\n 1. Delete advertisement mails.\n 2. Reply to all other mails.\n 3. If an email contains event information, add it to calendar."];
+        NSMutableString *helpMsg = [NSMutableString stringWithString:@"There are three tasks.\n 1. Delete advertisement mails.\n 2. Reply to all other mails.\n 3. If an email contains event information, add it to calendar.\n\n"];
         
         if([varMan feedbackMode] == VOICE_FEEDBACK) {
             [helpMsg appendString:@"At any time say \"Listen Again\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
@@ -456,7 +456,7 @@
     }
     
     else if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY) {
-        
+        [ViewEffects popupAlertViewWithMsg:@"Voice Command List:\n\nFirst Email\n\nSecond Email" targetViewController:self forDuration:3.5];
     }
 }
 

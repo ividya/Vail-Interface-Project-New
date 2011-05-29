@@ -266,6 +266,9 @@
         [self.player play];
         [NSThread sleepForTimeInterval:[self.player duration] +0.5];
     }    
+    else if([[InterfaceVariableManager sharedManager] displayMode] == SCREEN_DISPLAY) {
+        [ViewEffects popupAlertViewWithMsg:@"Voice Command List:\n\nAdd to calendar" targetViewController:self forDuration:3.5];
+    }
 }
 
 - (void)yes:(id) param
