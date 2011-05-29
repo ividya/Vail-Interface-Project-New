@@ -492,7 +492,7 @@
     }
     
     
-    if (currentDistance > 7200 && stage1complete) {
+    if (currentDistance > 7100 && stage1complete) {
         [[EmailManager instance] addMoreEmails];
         [self addNewEmails:nil];
         [refreshTimer invalidate];
