@@ -109,7 +109,7 @@
         
     }else{
         nController.pathValue = @"CAFE";
-        soundPath = [[NSBundle mainBundle] pathForResource:@"cfelected" ofType:@"mp3"];
+        soundPath = [[NSBundle mainBundle] pathForResource:@"cfselected" ofType:@"mp3"];
         
     }
     
