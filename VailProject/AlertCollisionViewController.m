@@ -51,6 +51,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY && [[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK ){
+        self.view.hidden = YES;
+    }
     
     startDistance = [[InterfaceVariableManager sharedManager] distance];
     

@@ -69,9 +69,13 @@
     [[InterfaceVariableManager sharedManager] setSpeed:0.0];
     [[InterfaceVariableManager sharedManager] setLane:2];
     
+
+    
+    
     PathNavigationViewController *nController =[[PathNavigationViewController alloc] initWithNibName:@"PathNavigationViewController" bundle:nil];
     [self.navigationController pushViewController:nController animated:YES];
     [nController release];
+    
 }
 
 - (IBAction)emailButtonPushed:(id)sender

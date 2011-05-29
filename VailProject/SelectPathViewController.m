@@ -55,6 +55,10 @@
 {
     [super viewDidLoad];
     
+    if([[InterfaceVariableManager sharedManager] displayMode] == VOICE_DISPLAY && [[InterfaceVariableManager sharedManager] feedbackMode] == VOICE_FEEDBACK ){
+        self.view.hidden = YES;
+    }
+    
     // Hide Back
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
