@@ -174,6 +174,10 @@
     
     if ([EmailManager instance].tutorialMode){
         NSMutableString *helpMsg = [NSMutableString stringWithString:@"There are three tasks.\n 1. Delete advertisement mails.\n 2. Reply to all other mails.\n 3. If an email contains event information, add it to calendar.\n\n"];
+
+        if([varMan displayMode] == VOICE_DISPLAY && [varMan feedbackMode] == VOICE_FEEDBACK) {
+            [helpMsg appendString:@"At any time say \"Listen Again\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
+        }
         
         if([varMan feedbackMode] == VOICE_FEEDBACK) {
             [helpMsg appendString:@"At any time say \"Listen Again\" to repeat message content.\n\n To get list of available voice commands, say \"Voice Commands\"."];
