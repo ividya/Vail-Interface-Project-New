@@ -90,7 +90,6 @@
 		2FA6B5EE1382446000EC3145 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6B5E51382446000EC3145 /* Reachability.m */; };
 		2FA6B5F01382451C00EC3145 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA6B5EF1382451C00EC3145 /* SystemConfiguration.framework */; };
 		2FA6B5F31382453300EC3145 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA6B5F21382453300EC3145 /* MobileCoreServices.framework */; };
-		2FA6B5F61382454600EC3145 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA6B5F51382454600EC3145 /* libz.1.2.3.dylib */; };
 		9E05BF1B138E4A88001EE84A /* emailcontent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E05BF1A138E4A88001EE84A /* emailcontent.mp3 */; };
 		9E086D77138BC175006D73A9 /* confirmingaddtocalendar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E086D76138BC175006D73A9 /* confirmingaddtocalendar.mp3 */; };
 		9E086D7C138C38BB006D73A9 /* message2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E086D79138C38BB006D73A9 /* message2.mp3 */; };
@@ -185,6 +184,7 @@
 		9E953E52138A50770010B378 /* noresponsesent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E953E4F138A50770010B378 /* noresponsesent.mp3 */; };
 		9E953E53138A50770010B378 /* yesresponsesent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E953E50138A50770010B378 /* yesresponsesent.mp3 */; };
 		9E953E55138A5BC80010B378 /* b2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E953E54138A5BC80010B378 /* b2.mp3 */; };
+		9E9C9F0C15C10048000449E2 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9C9F0B15C10048000449E2 /* libz.1.2.5.dylib */; };
 		9EA1321A138695C000620F46 /* ViewEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA13219138695C000620F46 /* ViewEffects.m */; };
 		9EA62C581389EC67001D1D17 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA62C561389EC67001D1D17 /* CustomAlertViewController.m */; };
 		9EA62C591389EC67001D1D17 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA62C571389EC67001D1D17 /* CustomAlertViewController.xib */; };
@@ -387,13 +387,13 @@
 		9E34892C138AB3AF0048F070 /* AdminScenarioSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminScenarioSelectViewController.h; sourceTree = "<group>"; };
 		9E34892D138AB3AF0048F070 /* AdminScenarioSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminScenarioSelectViewController.m; sourceTree = "<group>"; };
 		9E34892E138AB3AF0048F070 /* AdminScenarioSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminScenarioSelectViewController.xib; sourceTree = "<group>"; };
-		9E3BA16D136BFB410011F33F /* VailProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VailProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3BA16D136BFB410011F33F /* Yeon's Interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yeon's Interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3BA171136BFB410011F33F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9E3BA173136BFB410011F33F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9E3BA175136BFB410011F33F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9E3BA179136BFB410011F33F /* VailProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VailProject-Info.plist"; sourceTree = "<group>"; };
+		9E3BA179136BFB410011F33F /* Yeon's Interface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Yeon's Interface-Info.plist"; sourceTree = "<group>"; };
 		9E3BA17B136BFB410011F33F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9E3BA17D136BFB410011F33F /* VailProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VailProject-Prefix.pch"; sourceTree = "<group>"; };
+		9E3BA17D136BFB410011F33F /* Yeon's Interface-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yeon's Interface-Prefix.pch"; sourceTree = "<group>"; };
 		9E3BA17E136BFB410011F33F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9E3BA180136BFB410011F33F /* VailProjectAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VailProjectAppDelegate.h; sourceTree = "<group>"; };
 		9E3BA181136BFB410011F33F /* VailProjectAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VailProjectAppDelegate.m; sourceTree = "<group>"; };
@@ -433,6 +433,7 @@
 		9E953E4F138A50770010B378 /* noresponsesent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = noresponsesent.mp3; sourceTree = "<group>"; };
 		9E953E50138A50770010B378 /* yesresponsesent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yesresponsesent.mp3; sourceTree = "<group>"; };
 		9E953E54138A5BC80010B378 /* b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b2.mp3; sourceTree = "<group>"; };
+		9E9C9F0B15C10048000449E2 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		9EA13218138695C000620F46 /* ViewEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewEffects.h; sourceTree = "<group>"; };
 		9EA13219138695C000620F46 /* ViewEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewEffects.m; sourceTree = "<group>"; };
 		9EA62C551389EC67001D1D17 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
@@ -447,7 +448,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA6B5F61382454600EC3145 /* libz.1.2.3.dylib in Frameworks */,
+				9E9C9F0C15C10048000449E2 /* libz.1.2.5.dylib in Frameworks */,
 				9E3BA176136BFB410011F33F /* CoreGraphics.framework in Frameworks */,
 				2FA6B5F31382453300EC3145 /* MobileCoreServices.framework in Frameworks */,
 				9E7B3C74136C0D28001D7CF7 /* CFNetwork.framework in Frameworks */,
@@ -609,7 +610,6 @@
 				9E26E3F3137404F200B3CBEB /* h0.mp3 */,
 				9E26E3F4137404F200B3CBEB /* h1.mp3 */,
 				9E26E3F5137404F200B3CBEB /* h2.mp3 */,
-				2F3CC22F1373E16C00DFED59 /* pathq.mp3 */,
 				2F28B39D1372962800A33254 /* turnright.mp3 */,
 				2F28B39E1372962800A33254 /* turnleft.mp3 */,
 				2F1DDAA91371A7BA004F9AFB /* wrongway.mp3 */,
@@ -690,6 +690,7 @@
 		9E3BA162136BFB400011F33F = {
 			isa = PBXGroup;
 			children = (
+				9E9C9F0B15C10048000449E2 /* libz.1.2.5.dylib */,
 				2FA6B5F51382454600EC3145 /* libz.1.2.3.dylib */,
 				2FA6B5F41382453C00EC3145 /* CoreGraphics.framework */,
 				2FA6B5F21382453300EC3145 /* MobileCoreServices.framework */,
@@ -708,7 +709,7 @@
 		9E3BA16E136BFB410011F33F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E3BA16D136BFB410011F33F /* VailProject.app */,
+				9E3BA16D136BFB410011F33F /* Yeon's Interface.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -748,9 +749,9 @@
 				2F53597A137136200006D89A /* voices */,
 				2F535979137135FB0006D89A /* images */,
 				9E7B3C7A136C168C001D7CF7 /* Web */,
-				9E3BA179136BFB410011F33F /* VailProject-Info.plist */,
+				9E3BA179136BFB410011F33F /* Yeon's Interface-Info.plist */,
 				9E3BA17A136BFB410011F33F /* InfoPlist.strings */,
-				9E3BA17D136BFB410011F33F /* VailProject-Prefix.pch */,
+				9E3BA17D136BFB410011F33F /* Yeon's Interface-Prefix.pch */,
 				9E3BA17E136BFB410011F33F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -853,9 +854,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9E3BA16C136BFB410011F33F /* VailProject */ = {
+		9E3BA16C136BFB410011F33F /* Yeon's Interface */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E3BA18E136BFB410011F33F /* Build configuration list for PBXNativeTarget "VailProject" */;
+			buildConfigurationList = 9E3BA18E136BFB410011F33F /* Build configuration list for PBXNativeTarget "Yeon's Interface" */;
 			buildPhases = (
 				9E3BA169136BFB410011F33F /* Sources */,
 				9E3BA16A136BFB410011F33F /* Frameworks */,
@@ -865,9 +866,9 @@
 			);
 			dependencies = (
 			);
-			name = VailProject;
+			name = "Yeon's Interface";
 			productName = VailProject;
-			productReference = 9E3BA16D136BFB410011F33F /* VailProject.app */;
+			productReference = 9E3BA16D136BFB410011F33F /* Yeon's Interface.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -878,7 +879,7 @@
 			attributes = {
 				ORGANIZATIONNAME = Stanford;
 			};
-			buildConfigurationList = 9E3BA167136BFB400011F33F /* Build configuration list for PBXProject "VailProject" */;
+			buildConfigurationList = 9E3BA167136BFB400011F33F /* Build configuration list for PBXProject "Yeon's Interface" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -890,7 +891,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9E3BA16C136BFB410011F33F /* VailProject */,
+				9E3BA16C136BFB410011F33F /* Yeon's Interface */,
 			);
 		};
 /* End PBXProject section */
@@ -1153,16 +1154,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jeongjin Ku (LVZZ62G5AQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jeongjin Ku (LVZZ62G5AQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Chun (8RST73WFR6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Chun (8RST73WFR6)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VailProject/VailProject-Prefix.pch";
-				INFOPLIST_FILE = "VailProject/VailProject-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "27637D58-3CEE-4BB4-BCDD-9F2D69378351";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27637D58-3CEE-4BB4-BCDD-9F2D69378351";
+				GCC_PREFIX_HEADER = "VailProject/Yeon's Interface-Prefix.pch";
+				INFOPLIST_FILE = "VailProject/Yeon's Interface-Info.plist";
+				PRODUCT_NAME = "Yeon's Interface";
+				PROVISIONING_PROFILE = "A11835B5-E4BD-4323-9540-8A08EF30A8CD";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A11835B5-E4BD-4323-9540-8A08EF30A8CD";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1172,15 +1173,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jeongjin Ku (LVZZ62G5AQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jeongjin Ku (LVZZ62G5AQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Chun (8RST73WFR6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Chun (8RST73WFR6)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VailProject/VailProject-Prefix.pch";
-				INFOPLIST_FILE = "VailProject/VailProject-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "27637D58-3CEE-4BB4-BCDD-9F2D69378351";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27637D58-3CEE-4BB4-BCDD-9F2D69378351";
+				GCC_PREFIX_HEADER = "VailProject/Yeon's Interface-Prefix.pch";
+				INFOPLIST_FILE = "VailProject/Yeon's Interface-Info.plist";
+				PRODUCT_NAME = "Yeon's Interface";
+				PROVISIONING_PROFILE = "A11835B5-E4BD-4323-9540-8A08EF30A8CD";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A11835B5-E4BD-4323-9540-8A08EF30A8CD";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1190,7 +1191,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9E3BA167136BFB400011F33F /* Build configuration list for PBXProject "VailProject" */ = {
+		9E3BA167136BFB400011F33F /* Build configuration list for PBXProject "Yeon's Interface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E3BA18C136BFB410011F33F /* Debug */,
@@ -1199,7 +1200,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E3BA18E136BFB410011F33F /* Build configuration list for PBXNativeTarget "VailProject" */ = {
+		9E3BA18E136BFB410011F33F /* Build configuration list for PBXNativeTarget "Yeon's Interface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E3BA18F136BFB410011F33F /* Debug */,
